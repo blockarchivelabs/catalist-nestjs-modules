@@ -1,6 +1,6 @@
-# Lido NestJS Modules
+# Catalist NestJS Modules
 
-NestJS modules for Lido Finance projects.
+NestJS modules for Catalist projects.
 
 ## Packages
 
