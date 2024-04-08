@@ -1,12 +1,12 @@
 # Contracts Module
 
-NestJS Contracts Module for Lido Finance projects.
-Part of [Lido NestJS Modules](https://github.com/lidofinance/lido-nestjs-modules/#readme)
+NestJS Contracts Module for Catalist Finance projects.
+Part of [Catalist NestJS Modules](https://github.com/blockarchivelabs/catalist-nestjs-modules/#readme)
 
 ## Install
 
 ```bash
-yarn add @lido-nestjs/contracts
+yarn add @catalist-nestjs/contracts
 ```
 
 ## Usage
@@ -16,13 +16,13 @@ yarn add @lido-nestjs/contracts
 ```ts
 // Import
 import { Module } from '@nestjs/common';
-import { LidoContractModule } from '@lido-nestjs/contracts';
+import { CatalistContractModule } from '@catalist-nestjs/contracts';
 import { getDefaultProvider } from '@ethersproject/providers';
 import { MyService } from './my.service';
 
 @Module({
   imports: [
-    LidoContractModule.forFeature({
+    CatalistContractModule.forFeature({
       provider: getDefaultProvider('mainnet'),
     }),
   ],
@@ -32,11 +32,11 @@ import { MyService } from './my.service';
 export class MyModule {}
 
 // Usage
-import { LIDO_CONTRACT_TOKEN, Lido } from '@lido-nestjs/contracts';
+import { CATALIST_CONTRACT_TOKEN, Catalist } from '@catalist-nestjs/contracts';
 import { Inject } from '@nestjs/common';
 
 export class MyService {
-  constructor(@Inject(LIDO_CONTRACT_TOKEN) private contract: Lido) {}
+  constructor(@Inject(CATALIST_CONTRACT_TOKEN) private contract: Catalist) {}
 
   async myMethod() {
     return await this.contract.decimals();
@@ -47,7 +47,7 @@ export class MyService {
 Specify a different address:
 
 ```ts
-LidoContractModule.forFeature({
+CatalistContractModule.forFeature({
   address: '0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84',
 });
 ```
@@ -56,10 +56,10 @@ LidoContractModule.forFeature({
 
 ```ts
 import { Module } from '@nestjs/common';
-import { LidoContractModule } from '@lido-nestjs/contracts';
+import { CatalistContractModule } from '@catalist-nestjs/contracts';
 
 @Module({
-  imports: [LidoContractModule.forRoot()],
+  imports: [CatalistContractModule.forRoot()],
 })
 export class MyModule {}
 ```
@@ -68,12 +68,12 @@ export class MyModule {}
 
 ```ts
 import { Module } from '@nestjs/common';
-import { LidoContractModule } from '@lido-nestjs/contracts';
+import { CatalistContractModule } from '@catalist-nestjs/contracts';
 import { ConfigModule, ConfigService } from './config.service';
 
 @Module({
   imports: [
-    LidoContractModule.forRootAsync({
+    CatalistContractModule.forRootAsync({
       async useFactory(testService: TestService) {
         return { address: testService.address };
       },
@@ -88,11 +88,11 @@ export class MyModule {}
 
 ```ts
 import { Module } from '@nestjs/common';
-import { LidoContractModule } from '@lido-nestjs/contracts';
+import { CatalistContractModule } from '@catalist-nestjs/contracts';
 import { ProviderModule } from './provider.service';
 
 @Module({
-  imports: [ProviderModule.forRoot(), LidoContractModule.forRoot()],
+  imports: [ProviderModule.forRoot(), CatalistContractModule.forRoot()],
 })
 export class MyModule {}
 ```

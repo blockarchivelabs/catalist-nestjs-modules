@@ -2,9 +2,9 @@ import { Module } from '@nestjs/common';
 import {
   ValidatorsRegistryModule,
   StorageModule,
-} from '@lido-nestjs/validators-registry';
-import { ConsensusModule } from '@lido-nestjs/consensus';
-import { FetchModule } from '@lido-nestjs/fetch';
+} from '@catalist-nestjs/validators-registry';
+import { ConsensusModule } from '@catalist-nestjs/consensus';
+import { FetchModule } from '@catalist-nestjs/fetch';
 import { MyService } from './my.service';
 import { MikroOrmModule } from '@mikro-orm/nestjs';
 

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { CHAINS } from '@lido-nestjs/constants';
-import { LidoContractModule } from '@lido-nestjs/contracts';
+import { CHAINS } from '@catalist-nestjs/constants';
+import { CatalistContractModule } from '@catalist-nestjs/contracts';
 import {
   currentWC,
   invalidUnusedKey,
@@ -11,36 +11,36 @@ import {
   validUsedKey,
   validUsedKeyCurrentWC,
 } from './fixtures/keys';
-import { range, withTimer } from '@lido-nestjs/utils';
+import { range, withTimer } from '@catalist-nestjs/utils';
 import {
   Key,
-  LidoKey,
-  LidoKeyValidatorInterface,
-  LidoKeyValidatorModule,
+  CatalistKey,
+  CatalistKeyValidatorInterface,
+  CatalistKeyValidatorModule,
 } from '../src';
 import { ModuleMetadata } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
 import { usedValidKeys } from './fixtures/used-valid-keys';
-import { LIDO_CONTRACT_TOKEN } from '@lido-nestjs/contracts';
+import { CATALIST_CONTRACT_TOKEN } from '@catalist-nestjs/contracts';
 
 export const sleep = (ms: number) =>
   new Promise((resolve) => setTimeout(resolve, ms));
 
-describe('LidoKeyValidator', () => {
+describe('CatalistKeyValidator', () => {
   jest.setTimeout(60000);
 
-  const getLidoKeyValidator = async (
+  const getCatalistKeyValidator = async (
     multithreaded: boolean,
     chain: CHAINS = CHAINS.Mainnet,
-  ): Promise<LidoKeyValidatorInterface> => {
+  ): Promise<CatalistKeyValidatorInterface> => {
     const module: ModuleMetadata = {
       imports: [
-        LidoContractModule.forRoot(),
-        LidoKeyValidatorModule.forFeature({ multithreaded }),
+        CatalistContractModule.forRoot(),
+        CatalistKeyValidatorModule.forFeature({ multithreaded }),
       ],
     };
     const moduleRef = await Test.createTestingModule(module)
-      .overrideProvider(LIDO_CONTRACT_TOKEN)
+      .overrideProvider(CATALIST_CONTRACT_TOKEN)
       .useValue({
         getWithdrawalCredentials: async () => {
           // this is needed because WC are cached
@@ -57,11 +57,11 @@ describe('LidoKeyValidator', () => {
       })
       .compile();
 
-    return moduleRef.get(LidoKeyValidatorInterface);
+    return moduleRef.get(CatalistKeyValidatorInterface);
   };
 
   test('[single-thread] should validate empty array immediately', async () => {
-    const keyValidator = await getLidoKeyValidator(false);
+    const keyValidator = await getCatalistKeyValidator(false);
 
     const [res, time] = await withTimer(() => keyValidator.validateKeys([]));
 
@@ -70,7 +70,7 @@ describe('LidoKeyValidator', () => {
   });
 
   test('[multi-thread] should validate empty array immediately', async () => {
-    const keyValidator = await getLidoKeyValidator(true);
+    const keyValidator = await getCatalistKeyValidator(true);
 
     const [res, time] = await withTimer(() => keyValidator.validateKeys([]));
 
@@ -79,7 +79,7 @@ describe('LidoKeyValidator', () => {
   });
 
   test('[single-thread] should validate one valid used key', async () => {
-    const keyValidator = await getLidoKeyValidator(false);
+    const keyValidator = await getCatalistKeyValidator(false);
 
     const [res, time] = await withTimer(() =>
       keyValidator.validateKey(validUsedKey),
@@ -93,7 +93,7 @@ describe('LidoKeyValidator', () => {
   });
 
   test('[multi-thread] should validate one valid used key', async () => {
-    const keyValidator = await getLidoKeyValidator(false);
+    const keyValidator = await getCatalistKeyValidator(false);
 
     const [res, time] = await withTimer(() =>
       keyValidator.validateKey(validUsedKey),
@@ -107,7 +107,7 @@ describe('LidoKeyValidator', () => {
   });
 
   test('[single-thread] should validate one valid unused key', async () => {
-    const keyValidator = await getLidoKeyValidator(false);
+    const keyValidator = await getCatalistKeyValidator(false);
 
     const [res, time] = await withTimer(() =>
       keyValidator.validateKey(validUnusedKeyCurrentWC),
@@ -123,7 +123,7 @@ describe('LidoKeyValidator', () => {
   });
 
   test('[multi-thread] should validate one valid unused key', async () => {
-    const keyValidator = await getLidoKeyValidator(true);
+    const keyValidator = await getCatalistKeyValidator(true);
 
     const [res, time] = await withTimer(() =>
       keyValidator.validateKey(validUnusedKeyCurrentWC),
@@ -139,19 +139,19 @@ describe('LidoKeyValidator', () => {
   });
 
   test('[multi-thread] should validate one multiple used/unused keys', async () => {
-    const keyValidator = await getLidoKeyValidator(true);
+    const keyValidator = await getCatalistKeyValidator(true);
 
     const containsKey = (
-      results: [Key & LidoKey, boolean][],
-      lidoKey: LidoKey,
+      results: [Key & CatalistKey, boolean][],
+      catalistKey: CatalistKey,
     ): boolean =>
       results
         .map((x) => x[0])
         .some(
           (x) =>
-            x.key === lidoKey.key &&
-            x.depositSignature == lidoKey.depositSignature &&
-            x.used == lidoKey.used,
+            x.key === catalistKey.key &&
+            x.depositSignature == catalistKey.depositSignature &&
+            x.used == catalistKey.used,
         );
 
     const keys = [
@@ -186,7 +186,7 @@ describe('LidoKeyValidator', () => {
   });
 
   test('[single-thread] should throw error for unsupported chain', async () => {
-    const keyValidator = await getLidoKeyValidator(false, 38292);
+    const keyValidator = await getCatalistKeyValidator(false, 38292);
 
     await expect(
       async () => await keyValidator.validateKeys([validUsedKey]),
@@ -194,7 +194,7 @@ describe('LidoKeyValidator', () => {
   });
 
   test('[multi-thread] should throw error for unsupported chain', async () => {
-    const keyValidator = await getLidoKeyValidator(true, 38292);
+    const keyValidator = await getCatalistKeyValidator(true, 38292);
 
     await expect(
       async () => await keyValidator.validateKeys([validUsedKey]),
@@ -202,7 +202,7 @@ describe('LidoKeyValidator', () => {
   });
 
   test('[single-thread] should work with valid keys', async () => {
-    const keyValidator = await getLidoKeyValidator(false);
+    const keyValidator = await getCatalistKeyValidator(false);
     const [results, time] = await withTimer(() =>
       keyValidator.validateKeys(usedValidKeys),
     );
@@ -215,7 +215,7 @@ describe('LidoKeyValidator', () => {
   });
 
   test('[multi-thread] should work with valid keys', async () => {
-    const keyValidator = await getLidoKeyValidator(true);
+    const keyValidator = await getCatalistKeyValidator(true);
     const [results, time] = await withTimer(() =>
       keyValidator.validateKeys(usedValidKeys),
     );
@@ -233,7 +233,7 @@ describe('LidoKeyValidator', () => {
       custom: i * 2,
     }));
 
-    const keyValidator = await getLidoKeyValidator(false);
+    const keyValidator = await getCatalistKeyValidator(false);
     const [results, time] = await withTimer(() =>
       keyValidator.validateKeys(usedValidKeysWithCustomProps),
     );
@@ -252,7 +252,7 @@ describe('LidoKeyValidator', () => {
       custom: i * 2,
     }));
 
-    const keyValidator = await getLidoKeyValidator(true);
+    const keyValidator = await getCatalistKeyValidator(true);
     const [results, time] = await withTimer(() =>
       keyValidator.validateKeys(usedValidKeysWithCustomProps),
     );
@@ -266,7 +266,7 @@ describe('LidoKeyValidator', () => {
   });
 
   test('should return false on invalid key', async () => {
-    const keyValidator = await getLidoKeyValidator(false);
+    const keyValidator = await getCatalistKeyValidator(false);
     const [results, time] = await withTimer(() =>
       keyValidator.validateKeys([invalidUsedKey]),
     );
@@ -279,7 +279,7 @@ describe('LidoKeyValidator', () => {
   });
 
   test('should return true on valid key', async () => {
-    const keyValidator = await getLidoKeyValidator(false);
+    const keyValidator = await getCatalistKeyValidator(false);
     const [results, time] = await withTimer(() =>
       keyValidator.validateKeys([validUsedKey]),
     );
@@ -292,7 +292,7 @@ describe('LidoKeyValidator', () => {
   });
 
   test('[multi-thread] should benchmark 1k keys', async () => {
-    const keyValidator = await getLidoKeyValidator(true);
+    const keyValidator = await getCatalistKeyValidator(true);
     const keys = range(0, 10)
       .map(() => usedValidKeys)
       .flat(1);

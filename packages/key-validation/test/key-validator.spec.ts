@@ -5,7 +5,7 @@ import {
   invalidKeyBadWC,
   validKey,
 } from './fixtures/keys';
-import { withTimer } from '@lido-nestjs/utils';
+import { withTimer } from '@catalist-nestjs/utils';
 import {
   Key,
   KeyValidator,

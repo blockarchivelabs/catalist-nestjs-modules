@@ -1,12 +1,12 @@
 # Nestjs Decorators
 
-Nestjs Decorators for Lido Finance projects.
-Part of [Lido NestJS Modules](https://github.com/lidofinance/lido-nestjs-modules/#readme)
+Nestjs Decorators for Catalist Finance projects.
+Part of [Catalist NestJS Modules](https://github.com/blockarchivelabs/catalist-nestjs-modules/#readme)
 
 ## Install
 
 ```bash
-yarn add @lido-nestjs/decorators
+yarn add @catalist-nestjs/decorators
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ yarn add @lido-nestjs/decorators
 The decorator does not allow to call the method more than once at a time.
 
 ```ts
-import { OneAtTime } from '@lido-nestjs/decorators';
+import { OneAtTime } from '@catalist-nestjs/decorators';
 
 export class TestService {
   @OneAtTime()

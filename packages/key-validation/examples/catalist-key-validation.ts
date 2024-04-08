@@ -2,43 +2,43 @@
 import { Module } from '@nestjs/common';
 import {
   Key,
-  LidoKey,
-  LidoKeyValidatorInterface,
-  LidoKeyValidatorModule,
-} from '@lido-nestjs/key-validation';
-import { LidoContractModule } from '@lido-nestjs/contracts';
+  CatalistKey,
+  CatalistKeyValidatorInterface,
+  CatalistKeyValidatorModule,
+} from '@catalist-nestjs/key-validation';
+import { CatalistContractModule } from '@catalist-nestjs/contracts';
 import {
   SimpleFallbackJsonRpcBatchProvider,
   FallbackProviderModule,
-} from '@lido-nestjs/execution';
+} from '@catalist-nestjs/execution';
 
 export class Example {
   public constructor(
-    // note that `LidoKeyValidatorInterface` is a Symbol-like interface tag
+    // note that `CatalistKeyValidatorInterface` is a Symbol-like interface tag
     // which point to specific implementation
-    private readonly lidoKeyValidator: LidoKeyValidatorInterface,
+    private readonly catalistKeyValidator: CatalistKeyValidatorInterface,
   ) {}
 
   public async someMethod() {
-    const key1: LidoKey = {
+    const key1: CatalistKey = {
       key: '0x00...1',
       depositSignature: '0x00...1',
       used: true,
     };
 
-    const key2: LidoKey = {
+    const key2: CatalistKey = {
       key: '0x00...1',
       depositSignature: '0x00...1',
       used: true,
     };
 
     // single key
-    const resultSingleKey: [Key & LidoKey, boolean] =
-      await this.lidoKeyValidator.validateKey(key1);
+    const resultSingleKey: [Key & CatalistKey, boolean] =
+      await this.catalistKeyValidator.validateKey(key1);
 
     // multiple keys
-    const resultMultupleKeys: [Key & LidoKey, boolean][] =
-      await this.lidoKeyValidator.validateKeys([key1, key2]);
+    const resultMultupleKeys: [Key & CatalistKey, boolean][] =
+      await this.catalistKeyValidator.validateKeys([key1, key2]);
   }
 }
 
@@ -48,14 +48,14 @@ export class Example {
       urls: ['http://localhost:8545'],
       network: 1,
     }),
-    LidoContractModule.forRootAsync({
+    CatalistContractModule.forRootAsync({
       // needed for getting WithdrawalCredentials and Network chain id
       async useFactory(provider: SimpleFallbackJsonRpcBatchProvider) {
         return { provider: provider };
       },
       inject: [SimpleFallbackJsonRpcBatchProvider],
     }),
-    LidoKeyValidatorModule.forFeature({ multithreaded: true }), // can be multithreaded or single-threaded
+    CatalistKeyValidatorModule.forFeature({ multithreaded: true }), // can be multithreaded or single-threaded
   ],
   providers: [Example],
   exports: [Example],

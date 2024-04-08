@@ -1,22 +1,22 @@
 import { DynamicModule, Module, Provider } from '@nestjs/common';
 import {
   GenesisForkVersionService,
-  LidoKeyValidator,
+  CatalistKeyValidator,
   WithdrawalCredentialsFetcher,
 } from './services';
 import { KeyValidatorModuleSyncOptions } from './interfaces/module.options';
 import { KeyValidatorModule } from './key-validator.module';
 import {
   GenesisForkVersionServiceInterface,
-  LidoKeyValidatorInterface,
+  CatalistKeyValidatorInterface,
   WithdrawalCredentialsExtractorInterface,
 } from './interfaces';
-import { LidoContractModule } from '@lido-nestjs/contracts';
+import { CatalistContractModule } from '@catalist-nestjs/contracts';
 
-export const getDefaultLidoKeyValidatorModuleProviders = (): Provider[] => [
+export const getDefaultCatalistKeyValidatorModuleProviders = (): Provider[] => [
   {
-    provide: LidoKeyValidatorInterface,
-    useClass: LidoKeyValidator,
+    provide: CatalistKeyValidatorInterface,
+    useClass: CatalistKeyValidator,
   },
   {
     provide: GenesisForkVersionServiceInterface,
@@ -29,7 +29,7 @@ export const getDefaultLidoKeyValidatorModuleProviders = (): Provider[] => [
 ];
 
 @Module({})
-export class LidoKeyValidatorModule {
+export class CatalistKeyValidatorModule {
   static forRoot(options?: KeyValidatorModuleSyncOptions): DynamicModule {
     return {
       global: true,
@@ -39,15 +39,15 @@ export class LidoKeyValidatorModule {
 
   static forFeature(options?: KeyValidatorModuleSyncOptions): DynamicModule {
     return {
-      module: LidoKeyValidatorModule,
+      module: CatalistKeyValidatorModule,
       imports: [
-        LidoContractModule,
+        CatalistContractModule,
         KeyValidatorModule.forFeature({
           multithreaded: options ? options.multithreaded : true,
         }),
       ],
-      providers: getDefaultLidoKeyValidatorModuleProviders(),
-      exports: [LidoKeyValidatorInterface],
+      providers: getDefaultCatalistKeyValidatorModuleProviders(),
+      exports: [CatalistKeyValidatorInterface],
     };
   }
 }

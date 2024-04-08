@@ -1,5 +1,5 @@
-import { CHAINS } from '@lido-nestjs/constants';
-import { createInterface } from '@lido-nestjs/di';
+import { CHAINS } from '@catalist-nestjs/constants';
+import { createInterface } from '@catalist-nestjs/di';
 
 export const GenesisForkVersionServiceInterface =
   createInterface<GenesisForkVersionServiceInterface>(

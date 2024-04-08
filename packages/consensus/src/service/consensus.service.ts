@@ -1,5 +1,5 @@
 import { Inject, Injectable, Optional } from '@nestjs/common';
-import { FetchService } from '@lido-nestjs/fetch';
+import { FetchService } from '@catalist-nestjs/fetch';
 import { ConsensusBaseService } from './base.service';
 import { ConsensusBeaconService } from './beacon.service';
 import { ConsensusDebugService } from './debug.service';

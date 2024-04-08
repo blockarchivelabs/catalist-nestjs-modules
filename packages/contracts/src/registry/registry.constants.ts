@@ -1,4 +1,4 @@
-import { CHAINS } from '@lido-nestjs/constants';
+import { CHAINS } from '@catalist-nestjs/constants';
 
 export const REGISTRY_CONTRACT_TOKEN = Symbol('registryContract');
 
@@ -7,4 +7,6 @@ export const REGISTRY_CONTRACT_ADDRESSES = {
   [CHAINS.Goerli]: '0x9D4AF1Ee19Dad8857db3a45B0374c81c8A1C6320',
   [CHAINS.Holesky]: '0x595F64Ddc3856a3b5Ff4f4CC1d1fb4B46cFd2bAC',
   [CHAINS.Sepolia]: '0x33d6E15047E8644F8DDf5CD05d202dfE587DA6E3',
+  [CHAINS.EnduranceDevnet]: '0x302908E8976d568147BcFD22A331ed9deBaAA7c8',
+  [CHAINS.EnduranceMainnet]: '0x1B731c8e3Cb936440F5298DBE548A7C9d765264C',
 };

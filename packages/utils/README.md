@@ -1,12 +1,12 @@
 # Utils
 
-Utils for Lido Finance projects.
-Part of [Lido NestJS Modules](https://github.com/lidofinance/lido-nestjs-modules/#readme)
+Utils for Catalist Finance projects.
+Part of [Catalist NestJS Modules](https://github.com/blockarchivelabs/catalist-nestjs-modules/#readme)
 
 ## Install
 
 ```bash
-yarn add @lido-nestjs/utils
+yarn add @catalist-nestjs/utils
 ```
 
 ## Usage
@@ -14,7 +14,7 @@ yarn add @lido-nestjs/utils
 ### Range
 
 ```ts
-import { range } from '@lido-nestjs/utils';
+import { range } from '@catalist-nestjs/utils';
 
 console.log(range(0, 4)); // 0, 1, 2, 3
 ```

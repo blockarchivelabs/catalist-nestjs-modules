@@ -1,8 +1,8 @@
 import { Inject, Injectable, LoggerService, Optional } from '@nestjs/common';
-import { Registry, REGISTRY_CONTRACT_TOKEN } from '@lido-nestjs/contracts';
+import { Registry, REGISTRY_CONTRACT_TOKEN } from '@catalist-nestjs/contracts';
 import { EntityManager } from '@mikro-orm/knex';
-import { LOGGER_PROVIDER } from '@lido-nestjs/logger';
-import { OneAtTime } from '@lido-nestjs/decorators';
+import { LOGGER_PROVIDER } from '@catalist-nestjs/logger';
+import { OneAtTime } from '@catalist-nestjs/decorators';
 
 import EventEmitter from 'events';
 import { CronJob } from 'cron';
@@ -24,7 +24,7 @@ import { compareOperators } from '../utils/operator.utils';
 
 import { REGISTRY_GLOBAL_OPTIONS_TOKEN } from './constants';
 import { RegistryOptions } from './interfaces/module.interface';
-import { chunk } from '@lido-nestjs/utils';
+import { chunk } from '@catalist-nestjs/utils';
 
 @Injectable()
 export abstract class AbstractRegistryService {

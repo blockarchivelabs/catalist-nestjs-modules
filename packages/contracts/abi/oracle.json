@@ -64,7 +64,7 @@
     "constant": false,
     "inputs": [
       {
-        "name": "_lidoLocator",
+        "name": "_catalistLocator",
         "type": "address"
       },
       {
@@ -117,7 +117,7 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "getLido",
+    "name": "getCatalist",
     "outputs": [
       {
         "name": "",

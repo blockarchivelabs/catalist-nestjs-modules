@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Test } from '@nestjs/testing';
-import { FetchModule, FetchService } from '@lido-nestjs/fetch';
+import { FetchModule, FetchService } from '@catalist-nestjs/fetch';
 import { IpfsGeneralService, IpfsModule } from '../../src';
 import { HttpException } from '@nestjs/common';
 

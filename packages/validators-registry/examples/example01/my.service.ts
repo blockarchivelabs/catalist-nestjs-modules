@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { ValidatorsRegistryInterface } from '@lido-nestjs/validators-registry';
+import { ValidatorsRegistryInterface } from '@catalist-nestjs/validators-registry';
 
 @Injectable()
 export class MyService {

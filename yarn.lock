@@ -416,6 +416,342 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@catalist-nestjs/consensus@workspace:*, @catalist-nestjs/consensus@workspace:packages/consensus":
+  version: 0.0.0-use.local
+  resolution: "@catalist-nestjs/consensus@workspace:packages/consensus"
+  dependencies:
+    "@catalist-nestjs/fetch": "workspace:*"
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    "@nestjs/testing": ^8.2.5
+    "@types/lodash.snakecase": ^4.1.6
+    "@types/node-fetch": ^2.5.12
+    lodash.snakecase: ^4.1.1
+    node-abort-controller: ^3.0.1
+    node-fetch: ^2.6.7
+    openapi-typescript: ^4.5.0
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+  peerDependencies:
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+    tslib: ^2.3.1
+  languageName: unknown
+  linkType: soft
+
+"@catalist-nestjs/constants@workspace:*, @catalist-nestjs/constants@workspace:packages/constants":
+  version: 0.0.0-use.local
+  resolution: "@catalist-nestjs/constants@workspace:packages/constants"
+  dependencies:
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    "@nestjs/testing": ^8.2.5
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+  peerDependencies:
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+    tslib: ^2.3.1
+  languageName: unknown
+  linkType: soft
+
+"@catalist-nestjs/contracts@workspace:*, @catalist-nestjs/contracts@workspace:packages/contracts":
+  version: 0.0.0-use.local
+  resolution: "@catalist-nestjs/contracts@workspace:packages/contracts"
+  dependencies:
+    "@catalist-nestjs/constants": "workspace:*"
+    "@ethersproject/abi": ^5.5.0
+    "@ethersproject/providers": ^5.5.3
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    "@nestjs/testing": ^8.2.5
+    ethers: ^5.5.4
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+  peerDependencies:
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+    tslib: ^2.3.1
+  languageName: unknown
+  linkType: soft
+
+"@catalist-nestjs/decorators@workspace:*, @catalist-nestjs/decorators@workspace:packages/decorators":
+  version: 0.0.0-use.local
+  resolution: "@catalist-nestjs/decorators@workspace:packages/decorators"
+  dependencies:
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    "@nestjs/testing": ^8.2.5
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+  peerDependencies:
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+    tslib: ^2.3.1
+  languageName: unknown
+  linkType: soft
+
+"@catalist-nestjs/di@workspace:*, @catalist-nestjs/di@workspace:packages/di":
+  version: 0.0.0-use.local
+  resolution: "@catalist-nestjs/di@workspace:packages/di"
+  dependencies:
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    "@nestjs/testing": ^8.2.5
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+  peerDependencies:
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+    tslib: ^2.3.1
+  languageName: unknown
+  linkType: soft
+
+"@catalist-nestjs/execution@workspace:*, @catalist-nestjs/execution@workspace:packages/execution":
+  version: 0.0.0-use.local
+  resolution: "@catalist-nestjs/execution@workspace:packages/execution"
+  dependencies:
+    "@catalist-nestjs/logger": "workspace:*"
+    "@catalist-nestjs/middleware": "workspace:*"
+    "@ethersproject/bignumber": ^5.5.0
+    "@ethersproject/bytes": ^5.5.0
+    "@ethersproject/logger": ^5.5.0
+    "@ethersproject/networks": ^5.5.2
+    "@ethersproject/properties": ^5.5.0
+    "@ethersproject/providers": ^5.5.3
+    "@ethersproject/web": ^5.5.1
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    "@nestjs/testing": ^8.2.5
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+  peerDependencies:
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+    tslib: ^2.3.1
+  languageName: unknown
+  linkType: soft
+
+"@catalist-nestjs/fetch@workspace:*, @catalist-nestjs/fetch@workspace:packages/fetch":
+  version: 0.0.0-use.local
+  resolution: "@catalist-nestjs/fetch@workspace:packages/fetch"
+  dependencies:
+    "@catalist-nestjs/middleware": "workspace:*"
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    "@nestjs/testing": ^8.2.5
+    "@types/node-fetch": ^2.5.12
+    "@types/stream-json": ^1.7.3
+    node-fetch: ^2.6.7
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+    stream-json: ^1.7.5
+  peerDependencies:
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+    tslib: ^2.3.1
+  languageName: unknown
+  linkType: soft
+
+"@catalist-nestjs/ipfs-http-client@workspace:*, @catalist-nestjs/ipfs-http-client@workspace:packages/ipfs-http-client":
+  version: 0.0.0-use.local
+  resolution: "@catalist-nestjs/ipfs-http-client@workspace:packages/ipfs-http-client"
+  dependencies:
+    "@catalist-nestjs/di": "workspace:*"
+    "@catalist-nestjs/fetch": "workspace:*"
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    "@nestjs/testing": ^8.2.5
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+  peerDependencies:
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+  languageName: unknown
+  linkType: soft
+
+"@catalist-nestjs/key-validation@workspace:packages/key-validation":
+  version: 0.0.0-use.local
+  resolution: "@catalist-nestjs/key-validation@workspace:packages/key-validation"
+  dependencies:
+    "@catalist-nestjs/constants": "workspace:*"
+    "@catalist-nestjs/contracts": "workspace:*"
+    "@catalist-nestjs/di": "workspace:*"
+    "@catalist-nestjs/utils": "workspace:*"
+    "@chainsafe/blst": 0.2.4
+    "@chainsafe/ssz": 0.9.2
+    "@ethersproject/providers": ^5.5.3
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    "@nestjs/testing": ^8.2.5
+    piscina: 3.2.0
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+  peerDependencies:
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+    tslib: ^2.3.1
+  languageName: unknown
+  linkType: soft
+
+"@catalist-nestjs/logger@workspace:*, @catalist-nestjs/logger@workspace:packages/logger":
+  version: 0.0.0-use.local
+  resolution: "@catalist-nestjs/logger@workspace:packages/logger"
+  dependencies:
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    "@nestjs/testing": ^8.2.5
+    "@types/traverse": ^0.6.32
+    nest-winston: ^1.6.2
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+    traverse: ^0.6.7
+    winston: ^3.4.0
+  peerDependencies:
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+    tslib: ^2.3.1
+  languageName: unknown
+  linkType: soft
+
+"@catalist-nestjs/middleware@workspace:*, @catalist-nestjs/middleware@workspace:packages/middleware":
+  version: 0.0.0-use.local
+  resolution: "@catalist-nestjs/middleware@workspace:packages/middleware"
+  dependencies:
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    "@nestjs/testing": ^8.2.5
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+  peerDependencies:
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+    tslib: ^2.3.1
+  languageName: unknown
+  linkType: soft
+
+"@catalist-nestjs/offchain-key-storage-client@workspace:packages/offchain-key-storage-client":
+  version: 0.0.0-use.local
+  resolution: "@catalist-nestjs/offchain-key-storage-client@workspace:packages/offchain-key-storage-client"
+  dependencies:
+    "@catalist-nestjs/ipfs-http-client": "workspace:*"
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    "@nestjs/testing": ^8.2.5
+    ethers: ^5.5.4
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+  peerDependencies:
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+  languageName: unknown
+  linkType: soft
+
+"@catalist-nestjs/registry@workspace:packages/registry":
+  version: 0.0.0-use.local
+  resolution: "@catalist-nestjs/registry@workspace:packages/registry"
+  dependencies:
+    "@catalist-nestjs/contracts": "workspace:*"
+    "@catalist-nestjs/decorators": "workspace:*"
+    "@catalist-nestjs/execution": "workspace:*"
+    "@catalist-nestjs/logger": "workspace:*"
+    "@catalist-nestjs/utils": "workspace:*"
+    "@mikro-orm/core": ^5.2.0
+    "@mikro-orm/knex": ^5.2.0
+    "@mikro-orm/migrations": ^5.2.0
+    "@mikro-orm/nestjs": ^5.0.2
+    "@mikro-orm/sqlite": ^5.2.0
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    "@nestjs/testing": ^8.2.5
+    "@types/cron": ^2
+    cron: ^2.0.0
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+  peerDependencies:
+    "@mikro-orm/core": ^5.2.0
+    "@mikro-orm/knex": ^5.2.0
+    "@mikro-orm/migrations": ^5.2.0
+    "@mikro-orm/nestjs": ^5.0.2
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+    tslib: ^2.3.1
+  languageName: unknown
+  linkType: soft
+
+"@catalist-nestjs/utils@workspace:*, @catalist-nestjs/utils@workspace:packages/utils":
+  version: 0.0.0-use.local
+  resolution: "@catalist-nestjs/utils@workspace:packages/utils"
+  dependencies:
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    "@nestjs/testing": ^8.2.5
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+  peerDependencies:
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+    tslib: ^2.3.1
+  languageName: unknown
+  linkType: soft
+
+"@catalist-nestjs/validators-registry@workspace:packages/validators-registry":
+  version: 0.0.0-use.local
+  resolution: "@catalist-nestjs/validators-registry@workspace:packages/validators-registry"
+  dependencies:
+    "@catalist-nestjs/consensus": "workspace:*"
+    "@catalist-nestjs/di": "workspace:*"
+    "@catalist-nestjs/utils": "workspace:*"
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    "@nestjs/testing": ^8.2.5
+    "@types/stream-json": ^1.7.4
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+    stream-chain: ^2.2.5
+    stream-json: ^1.8.0
+    zod: ^3.20.2
+  peerDependencies:
+    "@mikro-orm/core": ^5.7.13
+    "@mikro-orm/knex": ^5.7.13
+    "@mikro-orm/migrations": ^5.7.13
+    "@mikro-orm/nestjs": ^5.1.2
+    "@nestjs/common": ^8.2.5
+    "@nestjs/core": ^8.2.5
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.5.2
+    tslib: ^2.3.1
+  languageName: unknown
+  linkType: soft
+
 "@chainsafe/as-sha256@npm:^0.3.1":
   version: 0.3.1
   resolution: "@chainsafe/as-sha256@npm:0.3.1"
@@ -2474,342 +2810,6 @@ __metadata:
   checksum: 356496f23b8519099cbd9a77e16c0657472f4d47697eb1a95b3454a8bd01aab2695c2265ed70d5aa39980d4a43feda6001af046d2261bc573ce88ad61f09da62
   languageName: node
   linkType: hard
-
-"@lido-nestjs/consensus@workspace:*, @lido-nestjs/consensus@workspace:packages/consensus":
-  version: 0.0.0-use.local
-  resolution: "@lido-nestjs/consensus@workspace:packages/consensus"
-  dependencies:
-    "@lido-nestjs/fetch": "workspace:*"
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    "@nestjs/testing": ^8.2.5
-    "@types/lodash.snakecase": ^4.1.6
-    "@types/node-fetch": ^2.5.12
-    lodash.snakecase: ^4.1.1
-    node-abort-controller: ^3.0.1
-    node-fetch: ^2.6.7
-    openapi-typescript: ^4.5.0
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-  peerDependencies:
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-    tslib: ^2.3.1
-  languageName: unknown
-  linkType: soft
-
-"@lido-nestjs/constants@workspace:*, @lido-nestjs/constants@workspace:packages/constants":
-  version: 0.0.0-use.local
-  resolution: "@lido-nestjs/constants@workspace:packages/constants"
-  dependencies:
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    "@nestjs/testing": ^8.2.5
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-  peerDependencies:
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-    tslib: ^2.3.1
-  languageName: unknown
-  linkType: soft
-
-"@lido-nestjs/contracts@workspace:*, @lido-nestjs/contracts@workspace:packages/contracts":
-  version: 0.0.0-use.local
-  resolution: "@lido-nestjs/contracts@workspace:packages/contracts"
-  dependencies:
-    "@ethersproject/abi": ^5.5.0
-    "@ethersproject/providers": ^5.5.3
-    "@lido-nestjs/constants": "workspace:*"
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    "@nestjs/testing": ^8.2.5
-    ethers: ^5.5.4
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-  peerDependencies:
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-    tslib: ^2.3.1
-  languageName: unknown
-  linkType: soft
-
-"@lido-nestjs/decorators@workspace:*, @lido-nestjs/decorators@workspace:packages/decorators":
-  version: 0.0.0-use.local
-  resolution: "@lido-nestjs/decorators@workspace:packages/decorators"
-  dependencies:
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    "@nestjs/testing": ^8.2.5
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-  peerDependencies:
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-    tslib: ^2.3.1
-  languageName: unknown
-  linkType: soft
-
-"@lido-nestjs/di@workspace:*, @lido-nestjs/di@workspace:packages/di":
-  version: 0.0.0-use.local
-  resolution: "@lido-nestjs/di@workspace:packages/di"
-  dependencies:
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    "@nestjs/testing": ^8.2.5
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-  peerDependencies:
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-    tslib: ^2.3.1
-  languageName: unknown
-  linkType: soft
-
-"@lido-nestjs/execution@workspace:*, @lido-nestjs/execution@workspace:packages/execution":
-  version: 0.0.0-use.local
-  resolution: "@lido-nestjs/execution@workspace:packages/execution"
-  dependencies:
-    "@ethersproject/bignumber": ^5.5.0
-    "@ethersproject/bytes": ^5.5.0
-    "@ethersproject/logger": ^5.5.0
-    "@ethersproject/networks": ^5.5.2
-    "@ethersproject/properties": ^5.5.0
-    "@ethersproject/providers": ^5.5.3
-    "@ethersproject/web": ^5.5.1
-    "@lido-nestjs/logger": "workspace:*"
-    "@lido-nestjs/middleware": "workspace:*"
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    "@nestjs/testing": ^8.2.5
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-  peerDependencies:
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-    tslib: ^2.3.1
-  languageName: unknown
-  linkType: soft
-
-"@lido-nestjs/fetch@workspace:*, @lido-nestjs/fetch@workspace:packages/fetch":
-  version: 0.0.0-use.local
-  resolution: "@lido-nestjs/fetch@workspace:packages/fetch"
-  dependencies:
-    "@lido-nestjs/middleware": "workspace:*"
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    "@nestjs/testing": ^8.2.5
-    "@types/node-fetch": ^2.5.12
-    "@types/stream-json": ^1.7.3
-    node-fetch: ^2.6.7
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-    stream-json: ^1.7.5
-  peerDependencies:
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-    tslib: ^2.3.1
-  languageName: unknown
-  linkType: soft
-
-"@lido-nestjs/ipfs-http-client@workspace:*, @lido-nestjs/ipfs-http-client@workspace:packages/ipfs-http-client":
-  version: 0.0.0-use.local
-  resolution: "@lido-nestjs/ipfs-http-client@workspace:packages/ipfs-http-client"
-  dependencies:
-    "@lido-nestjs/di": "workspace:*"
-    "@lido-nestjs/fetch": "workspace:*"
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    "@nestjs/testing": ^8.2.5
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-  peerDependencies:
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-  languageName: unknown
-  linkType: soft
-
-"@lido-nestjs/key-validation@workspace:packages/key-validation":
-  version: 0.0.0-use.local
-  resolution: "@lido-nestjs/key-validation@workspace:packages/key-validation"
-  dependencies:
-    "@chainsafe/blst": 0.2.4
-    "@chainsafe/ssz": 0.9.2
-    "@ethersproject/providers": ^5.5.3
-    "@lido-nestjs/constants": "workspace:*"
-    "@lido-nestjs/contracts": "workspace:*"
-    "@lido-nestjs/di": "workspace:*"
-    "@lido-nestjs/utils": "workspace:*"
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    "@nestjs/testing": ^8.2.5
-    piscina: 3.2.0
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-  peerDependencies:
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-    tslib: ^2.3.1
-  languageName: unknown
-  linkType: soft
-
-"@lido-nestjs/logger@workspace:*, @lido-nestjs/logger@workspace:packages/logger":
-  version: 0.0.0-use.local
-  resolution: "@lido-nestjs/logger@workspace:packages/logger"
-  dependencies:
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    "@nestjs/testing": ^8.2.5
-    "@types/traverse": ^0.6.32
-    nest-winston: ^1.6.2
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-    traverse: ^0.6.7
-    winston: ^3.4.0
-  peerDependencies:
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-    tslib: ^2.3.1
-  languageName: unknown
-  linkType: soft
-
-"@lido-nestjs/middleware@workspace:*, @lido-nestjs/middleware@workspace:packages/middleware":
-  version: 0.0.0-use.local
-  resolution: "@lido-nestjs/middleware@workspace:packages/middleware"
-  dependencies:
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    "@nestjs/testing": ^8.2.5
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-  peerDependencies:
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-    tslib: ^2.3.1
-  languageName: unknown
-  linkType: soft
-
-"@lido-nestjs/offchain-key-storage-client@workspace:packages/offchain-key-storage-client":
-  version: 0.0.0-use.local
-  resolution: "@lido-nestjs/offchain-key-storage-client@workspace:packages/offchain-key-storage-client"
-  dependencies:
-    "@lido-nestjs/ipfs-http-client": "workspace:*"
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    "@nestjs/testing": ^8.2.5
-    ethers: ^5.5.4
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-  peerDependencies:
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-  languageName: unknown
-  linkType: soft
-
-"@lido-nestjs/registry@workspace:packages/registry":
-  version: 0.0.0-use.local
-  resolution: "@lido-nestjs/registry@workspace:packages/registry"
-  dependencies:
-    "@lido-nestjs/contracts": "workspace:*"
-    "@lido-nestjs/decorators": "workspace:*"
-    "@lido-nestjs/execution": "workspace:*"
-    "@lido-nestjs/logger": "workspace:*"
-    "@lido-nestjs/utils": "workspace:*"
-    "@mikro-orm/core": ^5.2.0
-    "@mikro-orm/knex": ^5.2.0
-    "@mikro-orm/migrations": ^5.2.0
-    "@mikro-orm/nestjs": ^5.0.2
-    "@mikro-orm/sqlite": ^5.2.0
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    "@nestjs/testing": ^8.2.5
-    "@types/cron": ^2
-    cron: ^2.0.0
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-  peerDependencies:
-    "@mikro-orm/core": ^5.2.0
-    "@mikro-orm/knex": ^5.2.0
-    "@mikro-orm/migrations": ^5.2.0
-    "@mikro-orm/nestjs": ^5.0.2
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-    tslib: ^2.3.1
-  languageName: unknown
-  linkType: soft
-
-"@lido-nestjs/utils@workspace:*, @lido-nestjs/utils@workspace:packages/utils":
-  version: 0.0.0-use.local
-  resolution: "@lido-nestjs/utils@workspace:packages/utils"
-  dependencies:
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    "@nestjs/testing": ^8.2.5
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-  peerDependencies:
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-    tslib: ^2.3.1
-  languageName: unknown
-  linkType: soft
-
-"@lido-nestjs/validators-registry@workspace:packages/validators-registry":
-  version: 0.0.0-use.local
-  resolution: "@lido-nestjs/validators-registry@workspace:packages/validators-registry"
-  dependencies:
-    "@lido-nestjs/consensus": "workspace:*"
-    "@lido-nestjs/di": "workspace:*"
-    "@lido-nestjs/utils": "workspace:*"
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    "@nestjs/testing": ^8.2.5
-    "@types/stream-json": ^1.7.4
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-    stream-chain: ^2.2.5
-    stream-json: ^1.8.0
-    zod: ^3.20.2
-  peerDependencies:
-    "@mikro-orm/core": ^5.7.13
-    "@mikro-orm/knex": ^5.7.13
-    "@mikro-orm/migrations": ^5.7.13
-    "@mikro-orm/nestjs": ^5.1.2
-    "@nestjs/common": ^8.2.5
-    "@nestjs/core": ^8.2.5
-    reflect-metadata: ^0.1.13
-    rxjs: ^7.5.2
-    tslib: ^2.3.1
-  languageName: unknown
-  linkType: soft
 
 "@lidofinance/yarn-workspaces-list@npm:0.1.1":
   version: 0.1.1
@@ -5685,6 +5685,38 @@ __metadata:
   checksum: b43bd4c440aa1e8ee6baefee8063b4850fd0d7b378f6aabc796c9ec8cb26d27fb30b46885350777d9bd079c5256c0e1329ad0dc7c2817e0bb466810ebb353751
   languageName: node
   linkType: hard
+
+"catalist-nestjs-modules@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "catalist-nestjs-modules@workspace:."
+  dependencies:
+    "@commitlint/cli": ^16.1.0
+    "@commitlint/config-conventional": ^16.0.0
+    "@lidofinance/yarn-workspaces-list": 0.1.1
+    "@rollup/plugin-node-resolve": ^13.3.0
+    "@typechain/ethers-v5": ^9.0.0
+    "@types/eslint-plugin-prettier": ^3.1.0
+    "@types/jest": ^27.4.0
+    "@typescript-eslint/eslint-plugin": ^5.10.0
+    "@typescript-eslint/parser": ^5.10.0
+    dotenv: ^16.0.0
+    eslint: ^8.7.0
+    eslint-config-prettier: ^8.3.0
+    eslint-plugin-prettier: ^4.0.0
+    husky: ^7.0.4
+    jest: ^27.5.1
+    lint-staged: ^12.2.2
+    multi-semantic-release: ^3.0.1
+    prettier: ^2.5.1
+    rollup: ^2.75.6
+    rollup-plugin-delete: ^2.0.0
+    rollup-plugin-typescript2: ^0.31.1
+    ts-jest: ^27.1.4
+    tslib: ^2.4.1
+    typechain: ^7.0.0
+    typescript: ^4.5.5
+  languageName: unknown
+  linkType: soft
 
 "chalk@npm:^2.0.0, chalk@npm:^2.3.1, chalk@npm:^2.3.2, chalk@npm:^2.4.2":
   version: 2.4.2
@@ -11360,38 +11392,6 @@ __metadata:
   checksum: 7ac0357c2227ee07511b423d3e43231bef2ac02254e858e73ff5502eea9f2c3372747ba5152fd6952aa47b4ba9482182b64493159fa7ef20c1fbb025458cb43f
   languageName: node
   linkType: hard
-
-"lido-nestjs-modules@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "lido-nestjs-modules@workspace:."
-  dependencies:
-    "@commitlint/cli": ^16.1.0
-    "@commitlint/config-conventional": ^16.0.0
-    "@lidofinance/yarn-workspaces-list": 0.1.1
-    "@rollup/plugin-node-resolve": ^13.3.0
-    "@typechain/ethers-v5": ^9.0.0
-    "@types/eslint-plugin-prettier": ^3.1.0
-    "@types/jest": ^27.4.0
-    "@typescript-eslint/eslint-plugin": ^5.10.0
-    "@typescript-eslint/parser": ^5.10.0
-    dotenv: ^16.0.0
-    eslint: ^8.7.0
-    eslint-config-prettier: ^8.3.0
-    eslint-plugin-prettier: ^4.0.0
-    husky: ^7.0.4
-    jest: ^27.5.1
-    lint-staged: ^12.2.2
-    multi-semantic-release: ^3.0.1
-    prettier: ^2.5.1
-    rollup: ^2.75.6
-    rollup-plugin-delete: ^2.0.0
-    rollup-plugin-typescript2: ^0.31.1
-    ts-jest: ^27.1.4
-    tslib: ^2.4.1
-    typechain: ^7.0.0
-    typescript: ^4.5.5
-  languageName: unknown
-  linkType: soft
 
 "lilconfig@npm:2.0.4":
   version: 2.0.4

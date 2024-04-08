@@ -1,24 +1,24 @@
 {
-  "name": "@lido-nestjs/registry",
+  "name": "@catalist-nestjs/registry",
   "version": "0.0.0-semantic-release",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
-  "homepage": "https://github.com/lidofinance/lido-nestjs-modules",
+  "homepage": "https://github.com/blockarchivelabs/catalist-nestjs-modules",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lidofinance/lido-nestjs-modules.git",
+    "url": "https://github.com/blockarchivelabs/catalist-nestjs-modules.git",
     "directory": "packages/registry"
   },
   "bugs": {
-    "url": "https://github.com/lidofinance/lido-nestjs-modules/issues"
+    "url": "https://github.com/blockarchivelabs/catalist-nestjs-modules/issues"
   },
   "sideEffects": false,
   "keywords": [
-    "lido",
-    "lido-nestjs",
-    "lido-nestjs-modules",
-    "lidofinance"
+    "catalist",
+    "catalist-nestjs",
+    "catalist-nestjs-modules",
+    "catalistfinance"
   ],
   "files": [
     "dist/*"
@@ -28,10 +28,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@lido-nestjs/contracts": "workspace:*",
-    "@lido-nestjs/decorators": "workspace:*",
-    "@lido-nestjs/logger": "workspace:*",
-    "@lido-nestjs/utils": "workspace:*",
+    "@catalist-nestjs/contracts": "workspace:*",
+    "@catalist-nestjs/decorators": "workspace:*",
+    "@catalist-nestjs/logger": "workspace:*",
+    "@catalist-nestjs/utils": "workspace:*",
     "cron": "^2.0.0"
   },
   "peerDependencies": {
@@ -46,7 +46,7 @@
     "tslib": "^2.3.1"
   },
   "devDependencies": {
-    "@lido-nestjs/execution": "workspace:*",
+    "@catalist-nestjs/execution": "workspace:*",
     "@mikro-orm/core": "^5.2.0",
     "@mikro-orm/knex": "^5.2.0",
     "@mikro-orm/migrations": "^5.2.0",

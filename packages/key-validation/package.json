@@ -1,23 +1,23 @@
 {
-  "name": "@lido-nestjs/key-validation",
+  "name": "@catalist-nestjs/key-validation",
   "version": "0.0.0-semantic-release",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
-  "homepage": "https://github.com/lidofinance/lido-nestjs-modules",
+  "homepage": "https://github.com/blockarchivelabs/catalist-nestjs-modules",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lidofinance/lido-nestjs-modules.git",
+    "url": "https://github.com/blockarchivelabs/catalist-nestjs-modules.git",
     "directory": "packages/key-validation"
   },
   "bugs": {
-    "url": "https://github.com/lidofinance/lido-nestjs-modules/issues"
+    "url": "https://github.com/blockarchivelabs/catalist-nestjs-modules/issues"
   },
   "sideEffects": false,
   "keywords": [
-    "lido",
-    "lido-nestjs",
-    "lido-nestjs-modules",
+    "catalist",
+    "catalist-nestjs",
+    "catalist-nestjs-modules",
     "lidofinance"
   ],
   "files": [
@@ -28,12 +28,12 @@
     "access": "public"
   },
   "dependencies": {
+    "@catalist-nestjs/constants": "workspace:*",
+    "@catalist-nestjs/contracts": "workspace:*",
+    "@catalist-nestjs/di": "workspace:*",
+    "@catalist-nestjs/utils": "workspace:*",
     "@chainsafe/blst": "0.2.4",
     "@chainsafe/ssz": "0.9.2",
-    "@lido-nestjs/constants": "workspace:*",
-    "@lido-nestjs/contracts": "workspace:*",
-    "@lido-nestjs/di": "workspace:*",
-    "@lido-nestjs/utils": "workspace:*",
     "piscina": "3.2.0"
   },
   "peerDependencies": {

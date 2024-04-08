@@ -4,8 +4,8 @@ import {
   Key,
   WITHDRAWAL_CREDENTIALS,
 } from '../../src';
-import { CHAINS } from '@lido-nestjs/constants';
-import { range } from '@lido-nestjs/utils';
+import { CHAINS } from '@catalist-nestjs/constants';
+import { range } from '@catalist-nestjs/utils';
 import { usedValidKeys } from './used-valid-keys';
 
 export const genesisForkVersion: Buffer =

@@ -1,19 +1,19 @@
 import { Injectable } from '@nestjs/common';
-import { ImplementsAtRuntime } from '@lido-nestjs/di';
+import { ImplementsAtRuntime } from '@catalist-nestjs/di';
 import {
   GenesisForkVersionServiceInterface,
   Key,
   KeyValidatorInterface,
-  LidoKey,
-  LidoKeyValidatorInterface,
+  CatalistKey,
+  CatalistKeyValidatorInterface,
   PossibleWC,
   WithdrawalCredentialsBuffer,
   WithdrawalCredentialsExtractorInterface,
 } from '../interfaces';
 
 @Injectable()
-@ImplementsAtRuntime(LidoKeyValidatorInterface)
-export class LidoKeyValidator implements LidoKeyValidatorInterface {
+@ImplementsAtRuntime(CatalistKeyValidatorInterface)
+export class CatalistKeyValidator implements CatalistKeyValidatorInterface {
   public constructor(
     protected readonly keyValidator: KeyValidatorInterface,
     protected readonly wcExtractor: WithdrawalCredentialsExtractorInterface,
@@ -21,61 +21,66 @@ export class LidoKeyValidator implements LidoKeyValidatorInterface {
   ) {}
 
   public async validateKey<T>(
-    lidoKey: LidoKey & T,
-  ): Promise<[Key & LidoKey & T, boolean]> {
+    catalistKey: CatalistKey & T,
+  ): Promise<[Key & CatalistKey & T, boolean]> {
     const possibleWC =
       await this.wcExtractor.getPossibleWithdrawalCredentials();
 
     return (
-      await this.validateLidoKeysForDifferentPossibleWC([lidoKey], possibleWC)
+      await this.validateCatalistKeysForDifferentPossibleWC(
+        [catalistKey],
+        possibleWC,
+      )
     )[0];
   }
 
   public async validateKeys<T>(
-    lidoKeys: (LidoKey & T)[],
-  ): Promise<[Key & LidoKey & T, boolean][]> {
-    if (lidoKeys.length === 0) {
+    catalistKeys: (CatalistKey & T)[],
+  ): Promise<[Key & CatalistKey & T, boolean][]> {
+    if (catalistKeys.length === 0) {
       return [];
     }
     const possibleWC =
       await this.wcExtractor.getPossibleWithdrawalCredentials();
 
-    return await this.validateLidoKeysForDifferentPossibleWC(
-      lidoKeys,
+    return await this.validateCatalistKeysForDifferentPossibleWC(
+      catalistKeys,
       possibleWC,
     );
   }
 
-  protected async validateLidoKeysForDifferentPossibleWC<T>(
-    lidoKeys: (LidoKey & T)[],
+  protected async validateCatalistKeysForDifferentPossibleWC<T>(
+    catalistKeys: (CatalistKey & T)[],
     possibleWC: PossibleWC,
-  ): Promise<[Key & LidoKey & T, boolean][]> {
+  ): Promise<[Key & CatalistKey & T, boolean][]> {
     const chainId = await this.wcExtractor.getChainId();
     const genesisForkVersion =
       await this.genesisForkVersionService.getGenesisForkVersion(chainId);
 
-    const unUsedKeys = lidoKeys
-      .filter((lidoKey) => !lidoKey.used)
-      .map((lidoKey) =>
-        this.lidoKeyToBasicKey<T>(
-          lidoKey,
+    const unUsedKeys = catalistKeys
+      .filter((catalistKey) => !catalistKey.used)
+      .map((catalistKey) =>
+        this.catalistKeyToBasicKey<T>(
+          catalistKey,
           possibleWC.currentWC[1],
           genesisForkVersion,
         ),
       );
 
-    const usedKeys = lidoKeys
-      .filter((lidoKey) => lidoKey.used)
-      .map((lidoKey) =>
-        this.lidoKeyToBasicKey<T>(
-          lidoKey,
+    const usedKeys = catalistKeys
+      .filter((catalistKey) => catalistKey.used)
+      .map((catalistKey) =>
+        this.catalistKeyToBasicKey<T>(
+          catalistKey,
           possibleWC.currentWC[1],
           genesisForkVersion,
         ),
       );
 
     // 1. first step of validation - unused keys with ONLY current WC
-    const unUsedKeysResults = await this.keyValidator.validateKeys<LidoKey & T>(
+    const unUsedKeysResults = await this.keyValidator.validateKeys<
+      CatalistKey & T
+    >(
       unUsedKeys.map((key) => ({
         ...key,
         withdrawalCredentials: possibleWC.currentWC[1],
@@ -112,13 +117,13 @@ export class LidoKeyValidator implements LidoKeyValidatorInterface {
     return usedKeysResults.concat(unUsedKeysResults);
   }
 
-  protected lidoKeyToBasicKey<T>(
-    lidoKey: LidoKey & T,
+  protected catalistKeyToBasicKey<T>(
+    catalistKey: CatalistKey & T,
     withdrawalCredentials: WithdrawalCredentialsBuffer,
     genesisForkVersion: Buffer,
-  ): Key & LidoKey & T {
+  ): Key & CatalistKey & T {
     return {
-      ...lidoKey,
+      ...catalistKey,
       withdrawalCredentials: withdrawalCredentials,
       genesisForkVersion,
     };

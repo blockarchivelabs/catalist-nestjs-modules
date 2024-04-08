@@ -1,5 +1,5 @@
 import { JsonRpcProvider } from '@ethersproject/providers';
-import { CHAINS } from '@lido-nestjs/constants';
+import { CHAINS } from '@catalist-nestjs/constants';
 import { Test } from '@nestjs/testing';
 import {
   AccountingOracleHashConsensusModule,
@@ -10,15 +10,15 @@ import {
   EasyTrackContractModule,
   ExecutionRewardsVaultContractModule,
   LdoContractModule,
-  LidoContractModule,
-  LidoLocatorContractModule,
+  CatalistContractModule,
+  CatalistLocatorContractModule,
   OracleContractModule,
   RegistryContractModule,
   SecurityContractModule,
   StakingRouterContractModule,
   ValidatorsExitBusOracleHashConsensusModule,
   WithdrawalQueueContractModule,
-  WstethContractModule,
+  WstaceContractModule,
   OracleReportSanityCheckerModule,
   ACCOUNTING_ORACLE_HASH_CONSENSUS_TOKEN,
   ACCOUNTING_ORACLE_HASH_CONSENSUS_ADDRESSES,
@@ -36,10 +36,10 @@ import {
   EXECUTION_REWARDS_VAULT_CONTRACT_TOKEN,
   LDO_CONTRACT_ADDRESSES,
   LDO_CONTRACT_TOKEN,
-  LIDO_CONTRACT_ADDRESSES,
-  LIDO_CONTRACT_TOKEN,
-  LIDO_LOCATOR_CONTRACT_ADDRESSES,
-  LIDO_LOCATOR_CONTRACT_TOKEN,
+  CATALIST_CONTRACT_ADDRESSES,
+  CATALIST_CONTRACT_TOKEN,
+  CATALIST_LOCATOR_CONTRACT_ADDRESSES,
+  CATALIST_LOCATOR_CONTRACT_TOKEN,
   ORACLE_CONTRACT_ADDRESSES,
   ORACLE_CONTRACT_TOKEN,
   REGISTRY_CONTRACT_ADDRESSES,
@@ -52,8 +52,8 @@ import {
   VALIDATORS_EXIT_BUS_ORACLE_HASH_CONSENSUS_TOKEN,
   WITHDRAWAL_QUEUE_CONTRACT_ADDRESSES,
   WITHDRAWAL_QUEUE_CONTRACT_TOKEN,
-  WSTETH_CONTRACT_ADDRESSES,
-  WSTETH_CONTRACT_TOKEN,
+  WSTACE_CONTRACT_ADDRESSES,
+  WSTACE_CONTRACT_TOKEN,
   ORACLE_REPORT_SANITY_CHECKER_ADDRESSES,
   ORACLE_REPORT_SANITY_CHECKER_TOKEN,
 } from '../src';
@@ -93,7 +93,11 @@ describe('Chains', () => {
 
   test('unexpected chain', async () => {
     await expect(() =>
-      getContract(LidoContractModule, LIDO_CONTRACT_TOKEN, CHAINS.Kovan),
+      getContract(
+        CatalistContractModule,
+        CATALIST_CONTRACT_TOKEN,
+        CHAINS.Kovan,
+      ),
     ).rejects.toThrowError('ChainId is not supported');
   });
 
@@ -145,19 +149,19 @@ describe('Chains', () => {
     );
   });
 
-  test('lido', async () => {
+  test('catalist', async () => {
     await testAddress(
-      LidoContractModule,
-      LIDO_CONTRACT_TOKEN,
-      LIDO_CONTRACT_ADDRESSES,
+      CatalistContractModule,
+      CATALIST_CONTRACT_TOKEN,
+      CATALIST_CONTRACT_ADDRESSES,
     );
   });
 
-  test('lido locator', async () => {
+  test('catalist locator', async () => {
     await testAddress(
-      LidoLocatorContractModule,
-      LIDO_LOCATOR_CONTRACT_TOKEN,
-      LIDO_LOCATOR_CONTRACT_ADDRESSES,
+      CatalistLocatorContractModule,
+      CATALIST_LOCATOR_CONTRACT_TOKEN,
+      CATALIST_LOCATOR_CONTRACT_ADDRESSES,
     );
   });
 
@@ -209,11 +213,11 @@ describe('Chains', () => {
     );
   });
 
-  test('wsteth', async () => {
+  test('wstace', async () => {
     await testAddress(
-      WstethContractModule,
-      WSTETH_CONTRACT_TOKEN,
-      WSTETH_CONTRACT_ADDRESSES,
+      WstaceContractModule,
+      WSTACE_CONTRACT_TOKEN,
+      WSTACE_CONTRACT_ADDRESSES,
     );
   });
 

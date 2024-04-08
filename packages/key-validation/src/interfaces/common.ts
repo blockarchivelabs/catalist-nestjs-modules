@@ -14,7 +14,7 @@ export interface Key {
   zeroHash?: Buffer;
 }
 
-export interface LidoKey {
+export interface CatalistKey {
   index?: Int;
   key: Pubkey;
   depositSignature: string;

@@ -10,7 +10,7 @@ import { Injectable, OnModuleDestroy } from '@nestjs/common';
 import { IsolationLevel, MikroORM, QueryOrder } from '@mikro-orm/core';
 import { NUM_VALIDATORS_MAX_CHUNK } from '../constants';
 import { ConsensusValidatorEntity } from './consensus-validator.entity';
-import { chunk } from '@lido-nestjs/utils/src';
+import { chunk } from '@catalist-nestjs/utils/src';
 import { mapSet, parseAsTypeOrFail } from '../utils';
 import { ConsensusDataInvalidError } from '../errors';
 import { EntityManager } from '@mikro-orm/knex';

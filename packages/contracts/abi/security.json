@@ -3,7 +3,7 @@
     "inputs": [
       {
         "internalType": "address",
-        "name": "_lido",
+        "name": "_catalist",
         "type": "address"
       },
       {
@@ -286,10 +286,10 @@
   },
   {
     "inputs": [],
-    "name": "LIDO",
+    "name": "CATALIST",
     "outputs": [
       {
-        "internalType": "contract ILido",
+        "internalType": "contract ICatalist",
         "name": "",
         "type": "address"
       }

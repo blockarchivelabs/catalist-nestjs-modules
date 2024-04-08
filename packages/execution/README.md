@@ -1,12 +1,12 @@
 # Execution layer (Eth1 RPC Provider)
 
-NestJS Logger for Lido Finance projects.
-Part of [Lido NestJS Modules](https://github.com/lidofinance/lido-nestjs-modules/#readme)
+NestJS Logger for Catalist Finance projects.
+Part of [Catalist NestJS Modules](https://github.com/blockarchivelabs/catalist-nestjs-modules/#readme)
 
 ## Install
 
 ```bash
-yarn add @lido-nestjs/execution
+yarn add @catalist-nestjs/execution
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ yarn add @lido-nestjs/execution
 ```ts
 // Import
 import { Injectable, Module } from '@nestjs/common';
-import { FallbackProviderModule } from '@lido-nestjs/execution';
+import { FallbackProviderModule } from '@catalist-nestjs/execution';
 import { MyService } from './my.service';
 
 @Module({
@@ -34,7 +34,7 @@ import { MyService } from './my.service';
 export class MyModule {}
 
 // Usage
-import { SimpleFallbackJsonRpcBatchProvider } from '@lido-nestjs/execution';
+import { SimpleFallbackJsonRpcBatchProvider } from '@catalist-nestjs/execution';
 
 @Injectable
 export class MyService {
@@ -50,7 +50,7 @@ export class MyService {
 
 ```ts
 import { Module } from '@nestjs/common';
-import { FallbackProviderModule } from '@lido-nestjs/execution';
+import { FallbackProviderModule } from '@catalist-nestjs/execution';
 import { ConfigModule, ConfigService } from './my.service';
 
 @Module({
@@ -71,14 +71,14 @@ import { ConfigModule, ConfigService } from './my.service';
 export class MyModule {}
 
 // Usage
-import { SimpleFallbackJsonRpcBatchProvider } from '@lido-nestjs/execution';
+import { SimpleFallbackJsonRpcBatchProvider } from '@catalist-nestjs/execution';
 
 @Injectable
 export class MyService {
-    constructor(private provider: SimpleFallbackJsonRpcBatchProvider) {}
+  constructor(private provider: SimpleFallbackJsonRpcBatchProvider) {}
 
-    async doSomeWork() {
-        return await this.provider.getBlock(1000);
-    }
+  async doSomeWork() {
+    return await this.provider.getBlock(1000);
+  }
 }
 ```

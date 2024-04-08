@@ -1,5 +1,5 @@
 import { Test } from '@nestjs/testing';
-import { FetchModule } from '@lido-nestjs/fetch';
+import { FetchModule } from '@catalist-nestjs/fetch';
 import { IpfsGeneralService, IpfsModule } from '../../src';
 import { ModuleMetadata } from '@nestjs/common';
 

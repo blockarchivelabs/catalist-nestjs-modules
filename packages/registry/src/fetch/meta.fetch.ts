@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Inject, Injectable } from '@nestjs/common';
-import { Registry, REGISTRY_CONTRACT_TOKEN } from '@lido-nestjs/contracts';
+import { Registry, REGISTRY_CONTRACT_TOKEN } from '@catalist-nestjs/contracts';
 import { CallOverrides } from './interfaces/overrides.interface';
 
 @Injectable()

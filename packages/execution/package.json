@@ -1,23 +1,23 @@
 {
-  "name": "@lido-nestjs/execution",
+  "name": "@catalist-nestjs/execution",
   "version": "0.0.0-semantic-release",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
-  "homepage": "https://github.com/lidofinance/lido-nestjs-modules",
+  "homepage": "https://github.com/blockarchivelabs/catalist-nestjs-modules",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lidofinance/lido-nestjs-modules.git",
+    "url": "https://github.com/blockarchivelabs/catalist-nestjs-modules.git",
     "directory": "packages/execution"
   },
   "bugs": {
-    "url": "https://github.com/lidofinance/lido-nestjs-modules/issues"
+    "url": "https://github.com/blockarchivelabs/catalist-nestjs-modules/issues"
   },
   "sideEffects": false,
   "keywords": [
-    "lido",
-    "lido-nestjs",
-    "lido-nestjs-modules",
+    "catalist",
+    "catalist-nestjs",
+    "catalist-nestjs-modules",
     "lidofinance",
     "execution",
     "execution-layer",
@@ -34,15 +34,15 @@
     "access": "public"
   },
   "dependencies": {
+    "@catalist-nestjs/logger": "workspace:*",
+    "@catalist-nestjs/middleware": "workspace:*",
     "@ethersproject/bignumber": "^5.5.0",
     "@ethersproject/bytes": "^5.5.0",
     "@ethersproject/logger": "^5.5.0",
     "@ethersproject/networks": "^5.5.2",
     "@ethersproject/properties": "^5.5.0",
     "@ethersproject/providers": "^5.5.3",
-    "@ethersproject/web": "^5.5.1",
-    "@lido-nestjs/logger": "workspace:*",
-    "@lido-nestjs/middleware": "workspace:*"
+    "@ethersproject/web": "^5.5.1"
   },
   "peerDependencies": {
     "@nestjs/common": "^8.2.5",

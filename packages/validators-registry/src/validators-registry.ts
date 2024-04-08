@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { ConsensusService } from '@lido-nestjs/consensus';
+import { ConsensusService } from '@catalist-nestjs/consensus';
 import { ValidatorsRegistryInterface, BlockId } from './interfaces';
 import {
   BlockHeader,

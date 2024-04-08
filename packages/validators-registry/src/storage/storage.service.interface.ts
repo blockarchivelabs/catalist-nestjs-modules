@@ -1,4 +1,4 @@
-import { createInterface } from '@lido-nestjs/di';
+import { createInterface } from '@catalist-nestjs/di';
 import {
   ConsensusMeta,
   ConsensusValidatorsAndMetadata,

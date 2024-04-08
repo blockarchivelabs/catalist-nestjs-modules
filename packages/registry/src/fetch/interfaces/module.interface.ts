@@ -5,7 +5,7 @@ import { Provider } from '@ethersproject/providers';
 
 export interface RegistryFetchOptions {
   registryAddress?: string;
-  lidoAddress?: string;
+  catalistAddress?: string;
   provider?: Provider | Signer;
 }
 

@@ -1,5 +1,5 @@
 {
-  "name": "lido-nestjs-modules",
+  "name": "catalist-nestjs-modules",
   "version": "0.0.0-semantic-release",
   "private": true,
   "workspaces": [

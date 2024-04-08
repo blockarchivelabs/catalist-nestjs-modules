@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { RequestInit as RequestInitSource, Response } from 'node-fetch';
 import { ModuleMetadata } from '@nestjs/common';
-import { MiddlewareCallback } from '@lido-nestjs/middleware';
+import { MiddlewareCallback } from '@catalist-nestjs/middleware';
 export { RequestInfo } from 'node-fetch';
 
 export interface FetchModuleOptions {

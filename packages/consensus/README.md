@@ -1,12 +1,12 @@
 # Consensus Layer API Module
 
-NestJS Consensus Layer API Module for Lido Finance projects.
-Part of [Lido NestJS Modules](https://github.com/lidofinance/lido-nestjs-modules/#readme)
+NestJS Consensus Layer API Module for Catalist Finance projects.
+Part of [Catalist NestJS Modules](https://github.com/blockarchivelabs/catalist-nestjs-modules/#readme)
 
 ## Install
 
 ```bash
-yarn add @lido-nestjs/consensus
+yarn add @catalist-nestjs/consensus
 ```
 
 ## Update types
@@ -19,13 +19,13 @@ The types used in the API methods are based on [Eth2Spec](https://ethereum.githu
 
 ## Usage
 
-This module depends on `FetchModule` from `@lido-nestjs/fetch`, so you need to provide it as a global module or import it into `ConsensusModule`.
+This module depends on `FetchModule` from `@catalist-nestjs/fetch`, so you need to provide it as a global module or import it into `ConsensusModule`.
 
 ```ts
 // Import
 import { Module } from '@nestjs/common';
-import { ConsensusModule } from '@lido-nestjs/consensus';
-import { FetchModule } from '@lido-nestjs/fetch';
+import { ConsensusModule } from '@catalist-nestjs/consensus';
+import { FetchModule } from '@catalist-nestjs/fetch';
 import { MyService } from './my.service';
 
 @Module({
@@ -36,7 +36,7 @@ import { MyService } from './my.service';
 export class MyModule {}
 
 // Usage
-import { ConsensusService } from '@lido-nestjs/consensus';
+import { ConsensusService } from '@catalist-nestjs/consensus';
 
 export class MyService {
   constructor(private consensusService: ConsensusService) {}
@@ -51,8 +51,8 @@ export class MyService {
 
 ```ts
 import { Module } from '@nestjs/common';
-import { ConsensusModule } from '@lido-nestjs/consensus';
-import { FetchModule } from '@lido-nestjs/fetch';
+import { ConsensusModule } from '@catalist-nestjs/consensus';
+import { FetchModule } from '@catalist-nestjs/fetch';
 
 @Module({
   imports: [FetchModule.forRoot(), ConsensusModule.forRoot()],
@@ -64,8 +64,8 @@ export class MyModule {}
 
 ```ts
 import { Module } from '@nestjs/common';
-import { ConsensusModule } from '@lido-nestjs/consensus';
-import { FetchModule } from '@lido-nestjs/fetch';
+import { ConsensusModule } from '@catalist-nestjs/consensus';
+import { FetchModule } from '@catalist-nestjs/fetch';
 import { ConfigModule, ConfigService } from './my.service';
 
 @Module({
@@ -89,7 +89,7 @@ Methods support fetch `options`:
 
 ```ts
 // Usage
-import { ConsensusService } from '@lido-nestjs/consensus';
+import { ConsensusService } from '@catalist-nestjs/consensus';
 
 export class MyService {
   constructor(private consensusService: ConsensusService) {}
@@ -107,7 +107,7 @@ export class MyService {
 Subscribe to head blocks:
 
 ```ts
-import { ConsensusService } from '@lido-nestjs/consensus';
+import { ConsensusService } from '@catalist-nestjs/consensus';
 
 export class MyService {
   constructor(private consensusService: ConsensusService) {
@@ -121,7 +121,7 @@ export class MyService {
 Subscribe to finalized blocks:
 
 ```ts
-import { ConsensusService } from '@lido-nestjs/consensus';
+import { ConsensusService } from '@catalist-nestjs/consensus';
 
 export class MyService {
   constructor(private consensusService: ConsensusService) {

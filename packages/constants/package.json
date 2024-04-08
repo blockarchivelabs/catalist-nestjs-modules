@@ -1,23 +1,23 @@
 {
-  "name": "@lido-nestjs/constants",
+  "name": "@catalist-nestjs/constants",
   "version": "0.0.0-semantic-release",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
-  "homepage": "https://github.com/lidofinance/lido-nestjs-modules",
+  "homepage": "https://github.com/blockarchivelabs/catalist-nestjs-modules",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lidofinance/lido-nestjs-modules.git",
+    "url": "https://github.com/blockarchivelabs/catalist-nestjs-modules.git",
     "directory": "packages/constants"
   },
   "bugs": {
-    "url": "https://github.com/lidofinance/lido-nestjs-modules/issues"
+    "url": "https://github.com/blockarchivelabs/catalist-nestjs-modules/issues"
   },
   "sideEffects": false,
   "keywords": [
-    "lido",
-    "lido-nestjs",
-    "lido-nestjs-modules",
+    "catalist",
+    "catalist-nestjs",
+    "catalist-nestjs-modules",
     "lidofinance"
   ],
   "files": [

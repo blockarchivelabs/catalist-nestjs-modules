@@ -1,6 +1,6 @@
 import fetch, { Response } from 'node-fetch';
 import { HttpException, Inject, Injectable, Optional } from '@nestjs/common';
-import { MiddlewareService } from '@lido-nestjs/middleware';
+import { MiddlewareService } from '@catalist-nestjs/middleware';
 import {
   FETCH_GLOBAL_OPTIONS_TOKEN,
   FETCH_GLOBAL_RETRY_DEFAULT_ATTEMPTS,

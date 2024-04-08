@@ -5,7 +5,7 @@ import { SimpleFallbackProviderConfig } from './simple-fallback-provider-config'
 import { ConnectionInfo } from '@ethersproject/web';
 import { Networkish } from './networkish';
 import { RequestPolicy } from '../provider/extended-json-rpc-batch-provider';
-import { MiddlewareCallback } from '@lido-nestjs/middleware';
+import { MiddlewareCallback } from '@catalist-nestjs/middleware';
 
 export interface FallbackProviderModuleSyncOptions
   extends Pick<ModuleMetadata, 'imports'>,

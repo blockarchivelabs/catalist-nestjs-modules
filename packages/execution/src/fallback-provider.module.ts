@@ -7,7 +7,7 @@ import {
 import { FALLBACK_PROVIDER_MODULE_OPTIONS } from './constants/constants';
 import { SimpleFallbackJsonRpcBatchProvider } from './provider/simple-fallback-json-rpc-batch-provider';
 import { LoggerService } from '@nestjs/common/services/logger.service';
-import { LOGGER_PROVIDER } from '@lido-nestjs/logger';
+import { LOGGER_PROVIDER } from '@catalist-nestjs/logger';
 
 const getModuleProviders = (
   options: FallbackProviderModuleSyncOptions,

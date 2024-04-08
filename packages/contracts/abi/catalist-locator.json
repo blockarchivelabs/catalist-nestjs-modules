@@ -25,7 +25,7 @@
           },
           {
             "internalType": "address",
-            "name": "lido",
+            "name": "catalist",
             "type": "address"
           },
           {
@@ -74,7 +74,7 @@
             "type": "address"
           }
         ],
-        "internalType": "struct LidoLocator.Config",
+        "internalType": "struct CatalistLocator.Config",
         "name": "_config",
         "type": "tuple"
       }
@@ -192,7 +192,7 @@
   },
   {
     "inputs": [],
-    "name": "lido",
+    "name": "catalist",
     "outputs": [
       {
         "internalType": "address",
@@ -218,7 +218,7 @@
   },
   {
     "inputs": [],
-    "name": "oracleReportComponentsForLido",
+    "name": "oracleReportComponentsForCatalist",
     "outputs": [
       {
         "internalType": "address",

@@ -12,7 +12,7 @@
   },
   {
     "inputs": [],
-    "name": "AppAuthLidoFailed",
+    "name": "AppAuthCatalistFailed",
     "type": "error"
   },
   {
@@ -995,7 +995,7 @@
   },
   {
     "inputs": [],
-    "name": "getLido",
+    "name": "getCatalist",
     "outputs": [
       {
         "internalType": "address",
@@ -1940,7 +1940,7 @@
       },
       {
         "internalType": "address",
-        "name": "_lido",
+        "name": "_catalist",
         "type": "address"
       },
       {

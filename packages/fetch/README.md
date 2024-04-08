@@ -1,14 +1,14 @@
 # Fetch
 
-NestJS Fetch for Lido Finance projects.
-Part of [Lido NestJS Modules](https://github.com/lidofinance/lido-nestjs-modules/#readme)
+NestJS Fetch for Catalist Finance projects.
+Part of [Catalist NestJS Modules](https://github.com/blockarchivelabs/catalist-nestjs-modules/#readme)
 
 The module is based on the [node-fetch](https://www.npmjs.com/package/node-fetch) package.
 
 ## Install
 
 ```bash
-yarn add @lido-nestjs/fetch
+yarn add @catalist-nestjs/fetch
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ yarn add @lido-nestjs/fetch
 ```ts
 // Import
 import { Module } from '@nestjs/common';
-import { FetchModule } from '@lido-nestjs/fetch';
+import { FetchModule } from '@catalist-nestjs/fetch';
 import { MyService } from './my.service';
 
 @Module({
@@ -29,7 +29,7 @@ import { MyService } from './my.service';
 export class MyModule {}
 
 // Usage
-import { FetchService } from '@lido-nestjs/fetch';
+import { FetchService } from '@catalist-nestjs/fetch';
 
 export class MyService {
   constructor(private fetchService: FetchService) {}
@@ -46,7 +46,7 @@ The `fetchService` provides 2 methods: `fetchJson` and `fetchText`, which are ba
 
 ```ts
 import { Module } from '@nestjs/common';
-import { FetchModule } from '@lido-nestjs/fetch';
+import { FetchModule } from '@catalist-nestjs/fetch';
 
 @Module({
   imports: [FetchModule.forRoot()],
@@ -58,7 +58,7 @@ export class MyModule {}
 
 ```ts
 import { Module } from '@nestjs/common';
-import { FetchModule } from '@lido-nestjs/fetch';
+import { FetchModule } from '@catalist-nestjs/fetch';
 import { ConfigModule, ConfigService } from './my.service';
 
 @Module({
@@ -102,7 +102,7 @@ export interface RequestRetryPolicy {
 ```ts
 // Import
 import { Module } from '@nestjs/common';
-import { FetchModule } from '@lido-nestjs/fetch';
+import { FetchModule } from '@catalist-nestjs/fetch';
 import { MyService } from './my.service';
 
 @Module({
@@ -121,7 +121,7 @@ import { MyService } from './my.service';
 export class MyModule {}
 
 // Usage
-import { FetchService } from '@lido-nestjs/fetch';
+import { FetchService } from '@catalist-nestjs/fetch';
 
 export class MyService {
   constructor(private fetchService: FetchService) {}
@@ -146,7 +146,7 @@ If the provided API services are unavailable, the following happens:
 The `retryPolicy` for each query can be rewritten:
 
 ```ts
-import { FetchService } from '@lido-nestjs/fetch';
+import { FetchService } from '@catalist-nestjs/fetch';
 
 export class MyService {
   constructor(private fetchService: FetchService) {}

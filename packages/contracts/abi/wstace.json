@@ -2,8 +2,8 @@
   {
     "inputs": [
       {
-        "internalType": "contract IStETH",
-        "name": "_stETH",
+        "internalType": "contract IBACE",
+        "name": "_bACE",
         "type": "address"
       }
     ],
@@ -181,11 +181,11 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "_wstETHAmount",
+        "name": "_wbACEAmount",
         "type": "uint256"
       }
     ],
-    "name": "getStETHByWstETH",
+    "name": "getBACEByWbACE",
     "outputs": [
       {
         "internalType": "uint256",
@@ -200,11 +200,11 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "_stETHAmount",
+        "name": "_bACEAmount",
         "type": "uint256"
       }
     ],
-    "name": "getWstETHByStETH",
+    "name": "getWbACEByBACE",
     "outputs": [
       {
         "internalType": "uint256",
@@ -316,10 +316,10 @@
   },
   {
     "inputs": [],
-    "name": "stETH",
+    "name": "bACE",
     "outputs": [
       {
-        "internalType": "contract IStETH",
+        "internalType": "contract IBACE",
         "name": "",
         "type": "address"
       }
@@ -329,7 +329,7 @@
   },
   {
     "inputs": [],
-    "name": "stEthPerToken",
+    "name": "bAcePerToken",
     "outputs": [
       {
         "internalType": "uint256",
@@ -355,7 +355,7 @@
   },
   {
     "inputs": [],
-    "name": "tokensPerStEth",
+    "name": "tokensPerbAce",
     "outputs": [
       {
         "internalType": "uint256",
@@ -436,7 +436,7 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "_wstETHAmount",
+        "name": "_wbACEAmount",
         "type": "uint256"
       }
     ],
@@ -455,7 +455,7 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "_stETHAmount",
+        "name": "_bACEAmount",
         "type": "uint256"
       }
     ],

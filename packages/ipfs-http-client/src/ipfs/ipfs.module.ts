@@ -1,5 +1,5 @@
 import { Module, DynamicModule } from '@nestjs/common';
-import { FetchService } from '@lido-nestjs/fetch';
+import { FetchService } from '@catalist-nestjs/fetch';
 import {
   IpfsModuleOptions,
   IpfsModuleOptionsAsync,
