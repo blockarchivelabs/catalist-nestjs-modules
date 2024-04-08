@@ -24,11 +24,11 @@ export * from './execution-rewards-vault/execution-rewards-vault.module';
 export * from './ldo/ldo.constants';
 export * from './ldo/ldo.module';
 
-export * from './lido/lido.constants';
-export * from './lido/lido.module';
+export * from './catalist/catalist.constants';
+export * from './catalist/catalist.module';
 
-export * from './lido-locator/lido-locator.constants';
-export * from './lido-locator/lido-locator.module';
+export * from './catalist-locator/catalist-locator.constants';
+export * from './catalist-locator/catalist-locator.module';
 
 export * from './oracle/oracle.constants';
 export * from './oracle/oracle.module';
@@ -45,8 +45,8 @@ export * from './staking-router/staking-router.module';
 export * from './withdrawal-queue/withdrawal-queue.constants';
 export * from './withdrawal-queue/withdrawal-queue.module';
 
-export * from './wsteth/wsteth.constants';
-export * from './wsteth/wsteth.module';
+export * from './wstace/wstace.constants';
+export * from './wstace/wstace.module';
 
 export * from './oracle-report-sanity-checker/oracle-report-sanity-checker.constants';
 export * from './oracle-report-sanity-checker/oracle-report-sanity-checker.module';

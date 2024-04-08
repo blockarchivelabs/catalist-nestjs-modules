@@ -1,12 +1,12 @@
 # Middleware
 
-NestJS Middleware Module for Lido Finance projects.
-Part of [Lido NestJS Modules](https://github.com/lidofinance/lido-nestjs-modules/#readme)
+NestJS Middleware Module for Catalist Finance projects.
+Part of [Catalist NestJS Modules](https://github.com/blockarchivelabs/catalist-nestjs-modules/#readme)
 
 ## Install
 
 ```bash
-yarn add @lido-nestjs/middleware
+yarn add @catalist-nestjs/middleware
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ yarn add @lido-nestjs/middleware
 ```ts
 // Import
 import { Module } from '@nestjs/common';
-import { MiddlewareModule } from '@lido-nestjs/middleware';
+import { MiddlewareModule } from '@catalist-nestjs/middleware';
 import { MyService } from './my.service';
 
 @Module({
@@ -37,7 +37,7 @@ import { MyService } from './my.service';
 export class MyModule {}
 
 // Usage
-import { MiddlewareService } from '@lido-nestjs/middleware';
+import { MiddlewareService } from '@catalist-nestjs/middleware';
 
 export class MyService {
   constructor(private middlewareService: MiddlewareService) {}
@@ -55,8 +55,8 @@ export class MyService {
 ```ts
 // Import
 import { Module } from '@nestjs/common';
-import { LoggerModule } from '@lido-nestjs/logger';
-import { MiddlewareModule } from '@lido-nestjs/middleware';
+import { LoggerModule } from '@catalist-nestjs/logger';
+import { MiddlewareModule } from '@catalist-nestjs/middleware';
 import { MyService } from './my.service';
 
 @Module({
@@ -83,7 +83,7 @@ import { MyService } from './my.service';
 export class MyModule {}
 
 // Usage
-import { MiddlewareService } from '@lido-nestjs/middleware';
+import { MiddlewareService } from '@catalist-nestjs/middleware';
 
 export class MyService {
   constructor(

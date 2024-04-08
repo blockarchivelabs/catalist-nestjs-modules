@@ -1,19 +1,19 @@
 # Library for storing keys in IPFS and creating merkle tree
 
 Library provide interface for storing Node operator's key in IPFS and preparing merkle tree and proofs.
-Part of [Lido NestJS Modules](https://github.com/lidofinance/lido-nestjs-modules/#readme).
+Part of [Catalist NestJS Modules](https://github.com/blockarchivelabs/catalist-nestjs-modules/#readme).
 
 ## Install
 
 ```bash
-yarn add @lido-nestjs/offchain-key-storage-client
+yarn add @catalist-nestjs/offchain-key-storage-client
 ```
 
 ## Ipfs
 
 ### Usage
 
-This module depends on `IpfsModule` from `@lido-nestjs/ipfs-http-client`, so you need to provide it as a global module or import it into `IpfsNopKeysModule`.
+This module depends on `IpfsModule` from `@catalist-nestjs/ipfs-http-client`, so you need to provide it as a global module or import it into `IpfsNopKeysModule`.
 
 ### IpfsModule
 
@@ -73,7 +73,7 @@ export class MyModule {}
 ```ts
 // Import
 import { Module } from '@nestjs/common';
-import { NopMerkleTreeModule } from '@lido-nestjs/offchain-key-storage-client';
+import { NopMerkleTreeModule } from '@catalist-nestjs/offchain-key-storage-client';
 import { MyService } from './my.service';
 
 @Module({
@@ -87,7 +87,7 @@ export class MyModule {}
 import {
   NopMerkleTreeService,
   KeySignBuffer,
-} from '@lido-nestjs/offchain-key-storage-client';
+} from '@catalist-nestjs/offchain-key-storage-client';
 
 export class MyService {
   constructor(private nopMerkleTreeService: NopMerkleTreeService) {}
@@ -98,4 +98,4 @@ export class MyService {
 }
 ```
 
-Example of usage this library https://github.com/lidofinance/lido-offchain-key-lib-test.git
+Example of usage this library https://github.com/catalistfinance/catalist-offchain-key-lib-test.git

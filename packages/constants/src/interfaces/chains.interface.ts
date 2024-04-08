@@ -12,4 +12,6 @@ export enum CHAINS {
   Zhejiang = 1337803, // decommissioned
   Holesky = 17000,
   Sepolia = 11155111,
+  EnduranceMainnet = 648,
+  EnduranceDevnet = 6480000002,
 }

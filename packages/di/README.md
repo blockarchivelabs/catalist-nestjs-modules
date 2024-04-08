@@ -1,12 +1,12 @@
 # Nest JS Dependency Injection runtime helpers
 
-NestJS Dependency Injection runtime helpers for Lido Finance projects.
-Part of [Lido NestJS Modules](https://github.com/lidofinance/lido-nestjs-modules/#readme)
+NestJS Dependency Injection runtime helpers for Catalist Finance projects.
+Part of [Catalist NestJS Modules](https://github.com/blockarchivelabs/catalist-nestjs-modules/#readme)
 
 ## Install
 
 ```bash
-yarn add @lido-nestjs/di
+yarn add @catalist-nestjs/di
 ```
 
 ## Motivation
@@ -91,7 +91,7 @@ Needed for proper work of `instanceof` operator for class instances.
 ### Basic usage
 
 ```ts
-import { createInterface, ImplementsAtRuntime } from '@lido-nestjs/di';
+import { createInterface, ImplementsAtRuntime } from '@catalist-nestjs/di';
 
 interface FooInterface {
   foo(): string;
@@ -125,18 +125,19 @@ console.log(foobar instanceof BarInterface === true); // true
 
 ```ts
 // service.interface.ts
-import { createInterface } from '@lido-nestjs/di';
+import { createInterface } from '@catalist-nestjs/di';
 
 export interface ServiceInterface {
   doSmth(): string;
 }
 // the interface name and the name of the constant should be the same
-export const ServiceInterface = createInterface<ServiceInterface>('ServiceInterface');
+export const ServiceInterface =
+  createInterface<ServiceInterface>('ServiceInterface');
 ```
 
 ```ts
 // service.ts
-import { ImplementsAtRuntime } from '@lido-nestjs/di';
+import { ImplementsAtRuntime } from '@catalist-nestjs/di';
 import { Injectable } from '@nestjs/common';
 
 // here, we are importing the type and the constant in one variable 'ServiceInterface'

@@ -1,4 +1,4 @@
-import { CHAINS } from '@lido-nestjs/constants';
+import { CHAINS } from '@catalist-nestjs/constants';
 
 export const ZERO_HASH = Buffer.alloc(32, 0);
 export const EMPTY_SIGNATURE = Buffer.alloc(96, 0);

@@ -7,7 +7,11 @@ import {
   ModuleMetadata,
 } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
-import { Lido, LidoContractModule, LIDO_CONTRACT_TOKEN } from '../src';
+import {
+  Catalist,
+  CatalistContractModule,
+  CATALIST_CONTRACT_TOKEN,
+} from '../src';
 
 const address = hexZeroPad('0x12', 20);
 const provider = getDefaultProvider(process.env.EL_RPC_URL);
@@ -32,7 +36,7 @@ class TestModule {
 describe('Async module initializing', () => {
   const testModules = async (metadata: ModuleMetadata) => {
     const moduleRef = await Test.createTestingModule(metadata).compile();
-    const contract: Lido = moduleRef.get(LIDO_CONTRACT_TOKEN);
+    const contract: Catalist = moduleRef.get(CATALIST_CONTRACT_TOKEN);
 
     expect(contract.name).toBeDefined();
     expect(contract.address).toBeDefined();
@@ -40,7 +44,7 @@ describe('Async module initializing', () => {
   };
 
   test('forRootAsync, Test module, Provider', async () => {
-    const module = LidoContractModule.forRootAsync({
+    const module = CatalistContractModule.forRootAsync({
       async useFactory(testService: TestService) {
         return { address: testService.address };
       },
@@ -53,7 +57,7 @@ describe('Async module initializing', () => {
   });
 
   test('forFeatureAsync, Test module, Provider', async () => {
-    const module = LidoContractModule.forFeatureAsync({
+    const module = CatalistContractModule.forFeatureAsync({
       async useFactory(testService: TestService) {
         return { address: testService.address };
       },
@@ -66,7 +70,7 @@ describe('Async module initializing', () => {
   });
 
   test('forFeatureAsync, Test module, Provider from options', async () => {
-    const module = LidoContractModule.forFeatureAsync({
+    const module = CatalistContractModule.forFeatureAsync({
       async useFactory(testService: TestService) {
         return { address: testService.address, provider };
       },
@@ -78,7 +82,7 @@ describe('Async module initializing', () => {
   });
 
   test('forFeatureAsync, Provider from options', async () => {
-    const module = LidoContractModule.forFeatureAsync({
+    const module = CatalistContractModule.forFeatureAsync({
       async useFactory() {
         return { address, provider };
       },
@@ -92,7 +96,7 @@ describe('Async module initializing', () => {
     await expect(() =>
       Test.createTestingModule({
         imports: [
-          LidoContractModule.forFeatureAsync({
+          CatalistContractModule.forFeatureAsync({
             async useFactory() {
               return { address };
             },
@@ -104,7 +108,7 @@ describe('Async module initializing', () => {
     await expect(() =>
       Test.createTestingModule({
         imports: [
-          LidoContractModule.forFeatureAsync({
+          CatalistContractModule.forFeatureAsync({
             async useFactory() {
               return { address };
             },

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Test } from '@nestjs/testing';
-import { nullTransport, LoggerModule } from '@lido-nestjs/logger';
+import { nullTransport, LoggerModule } from '@catalist-nestjs/logger';
 import { getNetwork } from '@ethersproject/networks';
 import { JsonRpcBatchProvider } from '@ethersproject/providers';
 import { MikroOrmModule } from '@mikro-orm/nestjs';

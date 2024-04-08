@@ -4,7 +4,7 @@ import {
   FetchModule,
   FetchModuleOptions,
   FetchService,
-} from '@lido-nestjs/fetch';
+} from '@catalist-nestjs/fetch';
 import { ConsensusModule, ConsensusService } from '../src';
 import { ModuleMetadata } from '@nestjs/common';
 import fetch from 'node-fetch';

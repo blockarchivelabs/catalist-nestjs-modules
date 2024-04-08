@@ -1,5 +1,5 @@
 import { Key } from './common';
-import { createInterface } from '@lido-nestjs/di';
+import { createInterface } from '@catalist-nestjs/di';
 
 export const KeyValidatorExecutorInterface =
   createInterface<KeyValidatorExecutorInterface>(

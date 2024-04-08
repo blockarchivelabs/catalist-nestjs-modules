@@ -211,7 +211,7 @@
     "constant": false,
     "inputs": [
       {
-        "name": "_lidoLocator",
+        "name": "_catalistLocator",
         "type": "address"
       },
       {
@@ -378,7 +378,7 @@
     "constant": false,
     "inputs": [
       {
-        "name": "_lidoLocator",
+        "name": "_catalistLocator",
         "type": "address"
       },
       {
@@ -1101,7 +1101,7 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "getLidoLocator",
+    "name": "getCatalistLocator",
     "outputs": [
       {
         "name": "",
@@ -1354,11 +1354,11 @@
     "inputs": [
       {
         "indexed": false,
-        "name": "lidoLocator",
+        "name": "catalistLocator",
         "type": "address"
       }
     ],
-    "name": "LidoLocatorSet",
+    "name": "CatalistLocatorSet",
     "type": "event"
   },
   {

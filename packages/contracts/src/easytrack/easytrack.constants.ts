@@ -1,4 +1,4 @@
-import { CHAINS } from '@lido-nestjs/constants';
+import { CHAINS } from '@catalist-nestjs/constants';
 
 export const EASYTRACK_CONTRACT_TOKEN = Symbol('easyTrackContract');
 

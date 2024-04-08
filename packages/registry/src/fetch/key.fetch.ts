@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Inject, Injectable } from '@nestjs/common';
-import { rangePromise } from '@lido-nestjs/utils';
-import { Registry, REGISTRY_CONTRACT_TOKEN } from '@lido-nestjs/contracts';
+import { rangePromise } from '@catalist-nestjs/utils';
+import { Registry, REGISTRY_CONTRACT_TOKEN } from '@catalist-nestjs/contracts';
 import { CallOverrides } from './interfaces/overrides.interface';
 import { RegistryKey } from './interfaces/key.interface';
 import { RegistryOperatorFetchService } from './operator.fetch';

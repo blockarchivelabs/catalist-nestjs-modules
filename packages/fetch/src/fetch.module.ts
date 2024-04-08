@@ -1,5 +1,5 @@
 import { DynamicModule, Module } from '@nestjs/common';
-import { MiddlewareModule } from '@lido-nestjs/middleware';
+import { MiddlewareModule } from '@catalist-nestjs/middleware';
 import { FETCH_GLOBAL_OPTIONS_TOKEN } from './fetch.constants';
 import { FetchService } from './fetch.service';
 import {

@@ -1,5 +1,5 @@
 import { Test } from '@nestjs/testing';
-import { FetchModule, FetchService } from '@lido-nestjs/fetch';
+import { FetchModule, FetchService } from '@catalist-nestjs/fetch';
 import { ConsensusModule, ConsensusService } from '../src';
 
 describe('Debug endpoints', () => {

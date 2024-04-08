@@ -1,5 +1,5 @@
 import { MikroOrmModule } from '@mikro-orm/nestjs';
-import { nullTransport, LoggerModule } from '@lido-nestjs/logger';
+import { nullTransport, LoggerModule } from '@catalist-nestjs/logger';
 import { ModuleMetadata } from '@nestjs/common';
 import { getNetwork } from '@ethersproject/networks';
 import { getDefaultProvider, Provider } from '@ethersproject/providers';

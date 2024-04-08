@@ -4,8 +4,8 @@ import { getNetwork } from '@ethersproject/networks';
 import { hexZeroPad } from '@ethersproject/bytes';
 import { getDefaultProvider, Provider } from '@ethersproject/providers';
 import { RegistryFetchModule, RegistryFetchService } from '../../src';
-import { LIDO_CONTRACT_TOKEN, Lido } from '@lido-nestjs/contracts';
-import { REGISTRY_CONTRACT_TOKEN, Registry } from '@lido-nestjs/contracts';
+import { CATALIST_CONTRACT_TOKEN, Catalist } from '@catalist-nestjs/contracts';
+import { REGISTRY_CONTRACT_TOKEN, Registry } from '@catalist-nestjs/contracts';
 
 describe('Sync module initializing', () => {
   const provider = getDefaultProvider(process.env.EL_RPC_URL);
@@ -43,21 +43,21 @@ describe('Sync module initializing', () => {
   });
 
   test('forFeature addresses', async () => {
-    const lidoAddress = hexZeroPad('0x01', 20);
+    const catalistAddress = hexZeroPad('0x01', 20);
     const registryAddress = hexZeroPad('0x02', 20);
 
     const imports = [
       RegistryFetchModule.forFeature({
         provider,
-        lidoAddress,
+        catalistAddress,
         registryAddress,
       }),
     ];
 
     const moduleRef = await testModules({ imports });
 
-    const lidoContract: Lido = moduleRef.get(LIDO_CONTRACT_TOKEN);
-    expect(lidoContract.address).toBe(lidoAddress);
+    const catalistContract: Catalist = moduleRef.get(CATALIST_CONTRACT_TOKEN);
+    expect(catalistContract.address).toBe(catalistAddress);
 
     const registryContract: Registry = moduleRef.get(REGISTRY_CONTRACT_TOKEN);
     expect(registryContract.address).toBe(registryAddress);

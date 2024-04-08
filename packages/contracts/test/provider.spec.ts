@@ -4,7 +4,11 @@ import { getNetwork } from '@ethersproject/networks';
 import { ModuleMetadata } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
 import { Wallet } from 'ethers';
-import { Lido, LidoContractModule, LIDO_CONTRACT_TOKEN } from '../src';
+import {
+  Catalist,
+  CatalistContractModule,
+  CATALIST_CONTRACT_TOKEN,
+} from '../src';
 
 const privateKey = '0x12';
 
@@ -19,23 +23,23 @@ describe('Providers', () => {
 
   const testModules = async (imports: ModuleMetadata['imports']) => {
     const moduleRef = await Test.createTestingModule({ imports }).compile();
-    const contract: Lido = moduleRef.get(LIDO_CONTRACT_TOKEN);
+    const contract: Catalist = moduleRef.get(CATALIST_CONTRACT_TOKEN);
 
     expect(contract.name).toBeDefined();
     expect(contract.symbol).toBeDefined();
   };
 
   test('Provider', async () => {
-    await testModules([LidoContractModule.forRoot({ provider })]);
+    await testModules([CatalistContractModule.forRoot({ provider })]);
   });
 
   test('Provider', async () => {
-    await testModules([LidoContractModule.forRoot({ provider: signer })]);
+    await testModules([CatalistContractModule.forRoot({ provider: signer })]);
   });
 
   test('Unknown', async () => {
     await expect(() =>
-      testModules([LidoContractModule.forRoot({ provider: {} as any })]),
+      testModules([CatalistContractModule.forRoot({ provider: {} as any })]),
     ).rejects.toThrow();
   });
 });

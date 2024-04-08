@@ -1,10 +1,10 @@
 import { Test } from '@nestjs/testing';
 import { MikroOrmModule } from '@mikro-orm/nestjs';
-import { nullTransport, LoggerModule } from '@lido-nestjs/logger';
+import { nullTransport, LoggerModule } from '@catalist-nestjs/logger';
 import {
   BatchProviderModule,
   ExtendedJsonRpcBatchProvider,
-} from '@lido-nestjs/execution';
+} from '@catalist-nestjs/execution';
 
 import {
   ValidatorRegistryModule,

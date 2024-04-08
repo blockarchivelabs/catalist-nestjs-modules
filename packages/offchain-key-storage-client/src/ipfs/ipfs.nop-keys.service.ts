@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { IpfsGeneralService } from '@lido-nestjs/ipfs-http-client';
+import { IpfsGeneralService } from '@catalist-nestjs/ipfs-http-client';
 import { NopKeysResult, isKeySignPairArray, KeySignPair } from './interfaces';
 
 @Injectable()

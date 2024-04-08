@@ -14,5 +14,7 @@ describe('Chains', () => {
     expect(CHAINS.Zhejiang).toBeDefined();
     expect(CHAINS.Holesky).toBeDefined();
     expect(CHAINS.Sepolia).toBeDefined();
+    expect(CHAINS.EnduranceMainnet).toBeDefined();
+    expect(CHAINS.EnduranceDevnet).toBeDefined();
   });
 });

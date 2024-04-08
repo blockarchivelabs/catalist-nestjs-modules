@@ -3,7 +3,7 @@
     "inputs": [
       {
         "internalType": "address",
-        "name": "_wstETH",
+        "name": "_wbACE",
         "type": "address"
       },
       {
@@ -187,7 +187,7 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "_amountOfStETH",
+        "name": "_amountOfBACE",
         "type": "uint256"
       }
     ],
@@ -198,7 +198,7 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "_amountOfStETH",
+        "name": "_amountOfBACE",
         "type": "uint256"
       }
     ],
@@ -636,7 +636,7 @@
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "amountOfStETH",
+        "name": "amountOfBACE",
         "type": "uint256"
       },
       {
@@ -753,7 +753,7 @@
   },
   {
     "inputs": [],
-    "name": "MAX_STETH_WITHDRAWAL_AMOUNT",
+    "name": "MAX_BACE_WITHDRAWAL_AMOUNT",
     "outputs": [
       {
         "internalType": "uint256",
@@ -766,7 +766,7 @@
   },
   {
     "inputs": [],
-    "name": "MIN_STETH_WITHDRAWAL_AMOUNT",
+    "name": "MIN_BACE_WITHDRAWAL_AMOUNT",
     "outputs": [
       {
         "internalType": "uint256",
@@ -831,10 +831,10 @@
   },
   {
     "inputs": [],
-    "name": "STETH",
+    "name": "BACE",
     "outputs": [
       {
-        "internalType": "contract IStETH",
+        "internalType": "contract IBACE",
         "name": "",
         "type": "address"
       }
@@ -844,10 +844,10 @@
   },
   {
     "inputs": [],
-    "name": "WSTETH",
+    "name": "WBACE",
     "outputs": [
       {
-        "internalType": "contract IWstETH",
+        "internalType": "contract IWbACE",
         "name": "",
         "type": "address"
       }
@@ -1326,7 +1326,7 @@
         "components": [
           {
             "internalType": "uint256",
-            "name": "amountOfStETH",
+            "name": "amountOfBACE",
             "type": "uint256"
           },
           {
@@ -1689,7 +1689,7 @@
         "type": "address"
       }
     ],
-    "name": "requestWithdrawalsWstETH",
+    "name": "requestWithdrawalsWbACE",
     "outputs": [
       {
         "internalType": "uint256[]",
@@ -1745,7 +1745,7 @@
         "type": "tuple"
       }
     ],
-    "name": "requestWithdrawalsWstETHWithPermit",
+    "name": "requestWithdrawalsWbACEWithPermit",
     "outputs": [
       {
         "internalType": "uint256[]",
@@ -1965,7 +1965,7 @@
   },
   {
     "inputs": [],
-    "name": "unfinalizedStETH",
+    "name": "unfinalizedBACE",
     "outputs": [
       {
         "internalType": "uint256",

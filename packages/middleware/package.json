@@ -1,24 +1,24 @@
 {
-  "name": "@lido-nestjs/middleware",
+  "name": "@catalist-nestjs/middleware",
   "version": "0.0.0-semantic-release",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
-  "homepage": "https://github.com/lidofinance/lido-nestjs-modules",
+  "homepage": "https://github.com/blockarchivelabs/catalist-nestjs-modules",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lidofinance/lido-nestjs-modules.git",
+    "url": "https://github.com/blockarchivelabs/catalist-nestjs-modules.git",
     "directory": "packages/middleware"
   },
   "bugs": {
-    "url": "https://github.com/lidofinance/lido-nestjs-modules/issues"
+    "url": "https://github.com/blockarchivelabs/catalist-nestjs-modules/issues"
   },
   "sideEffects": false,
   "keywords": [
-    "lido",
-    "lido-nestjs",
-    "lido-nestjs-modules",
-    "lidofinance"
+    "catalist",
+    "catalist-nestjs",
+    "catalist-nestjs-modules",
+    "catalistfinance"
   ],
   "files": [
     "dist/*"

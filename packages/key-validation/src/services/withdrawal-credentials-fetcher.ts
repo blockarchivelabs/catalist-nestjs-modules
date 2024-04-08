@@ -5,12 +5,12 @@ import {
 } from '../interfaces';
 import 'reflect-metadata';
 import { Inject, Injectable } from '@nestjs/common';
-import { ImplementsAtRuntime } from '@lido-nestjs/di';
-import { CHAINS } from '@lido-nestjs/constants';
-import { Lido, LIDO_CONTRACT_TOKEN } from '@lido-nestjs/contracts';
+import { ImplementsAtRuntime } from '@catalist-nestjs/di';
+import { CHAINS } from '@catalist-nestjs/constants';
+import { Catalist, CATALIST_CONTRACT_TOKEN } from '@catalist-nestjs/contracts';
 import { WITHDRAWAL_CREDENTIALS } from '../constants/constants';
 import { bufferFromHexString } from '../common/buffer-hex';
-import { MemoizeInFlightPromise } from '@lido-nestjs/utils';
+import { MemoizeInFlightPromise } from '@catalist-nestjs/utils';
 
 @Injectable()
 @ImplementsAtRuntime(WithdrawalCredentialsExtractorInterface)
@@ -18,7 +18,8 @@ export class WithdrawalCredentialsFetcher
   implements WithdrawalCredentialsExtractorInterface
 {
   public constructor(
-    @Inject(LIDO_CONTRACT_TOKEN) private readonly lidoContract: Lido,
+    @Inject(CATALIST_CONTRACT_TOKEN)
+    private readonly catalistContract: Catalist,
   ) {}
 
   /**
@@ -26,7 +27,7 @@ export class WithdrawalCredentialsFetcher
    */
   @MemoizeInFlightPromise()
   public async getWithdrawalCredentials(): Promise<WithdrawalCredentialsHex> {
-    return this.lidoContract.getWithdrawalCredentials();
+    return this.catalistContract.getWithdrawalCredentials();
   }
 
   @MemoizeInFlightPromise()
@@ -51,7 +52,7 @@ export class WithdrawalCredentialsFetcher
 
   @MemoizeInFlightPromise()
   public async getChainId(): Promise<CHAINS> {
-    const network = await this.lidoContract.provider.getNetwork();
+    const network = await this.catalistContract.provider.getNetwork();
 
     return network.chainId;
   }

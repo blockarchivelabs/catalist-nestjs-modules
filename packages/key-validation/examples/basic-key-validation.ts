@@ -5,8 +5,8 @@ import {
   Key,
   KeyValidatorInterface,
   GENESIS_FORK_VERSION,
-} from '@lido-nestjs/key-validation';
-import { CHAINS } from '@lido-nestjs/constants';
+} from '@catalist-nestjs/key-validation';
+import { CHAINS } from '@catalist-nestjs/constants';
 import { DOMAIN_DEPOSIT } from '../src';
 
 export class Example {

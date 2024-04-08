@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { currentWC } from './fixtures/keys';
-import { withTimer } from '@lido-nestjs/utils';
+import { withTimer } from '@catalist-nestjs/utils';
 import {
   bufferFromHexString,
   WithdrawalCredentialsExtractorInterface,
   WithdrawalCredentialsFetcher,
 } from '../src';
-import { Lido } from '@lido-nestjs/contracts';
-import { CHAINS } from '@lido-nestjs/constants';
+import { Catalist } from '@catalist-nestjs/contracts';
+import { CHAINS } from '@catalist-nestjs/constants';
 
 export const sleep = (ms: number) =>
   new Promise((resolve) => setTimeout(resolve, ms));
@@ -21,7 +21,7 @@ describe('WC Extractor', () => {
   let getNetwork!: jest.SpyInstance;
 
   beforeEach(() => {
-    const lidoContractMock: Lido = <Lido>(<any>{
+    const catalistContractMock: Catalist = <Catalist>(<any>{
       getWithdrawalCredentials: async () => {
         await sleep(1000);
 
@@ -35,10 +35,10 @@ describe('WC Extractor', () => {
       },
     });
 
-    getWC = jest.spyOn(lidoContractMock, 'getWithdrawalCredentials');
-    getNetwork = jest.spyOn(lidoContractMock.provider, 'getNetwork');
+    getWC = jest.spyOn(catalistContractMock, 'getWithdrawalCredentials');
+    getNetwork = jest.spyOn(catalistContractMock.provider, 'getNetwork');
 
-    wcExtractor = new WithdrawalCredentialsFetcher(lidoContractMock);
+    wcExtractor = new WithdrawalCredentialsFetcher(catalistContractMock);
   });
 
   test('should return getChainId', async () => {

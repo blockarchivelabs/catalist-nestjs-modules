@@ -1,5 +1,5 @@
 import { Key, KeyValidatorExecutorInterface } from '../interfaces';
-import { partition } from '@lido-nestjs/utils';
+import { partition } from '@catalist-nestjs/utils';
 import Piscina from 'piscina';
 import { serialize } from '../worker/serialize';
 import worker from '../worker/key-validator.worker';

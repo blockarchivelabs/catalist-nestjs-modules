@@ -1,27 +1,27 @@
 # Library for storing keys in IPFS and creating merkle tree
 
 Simple http ipfs client.
-Part of [Lido NestJS Modules](https://github.com/lidofinance/lido-nestjs-modules/#readme).
+Part of [Catalist NestJS Modules](https://github.com/blockarchivelabs/catalist-nestjs-modules/#readme).
 
 ## Install
 
 ```bash
-yarn add @lido-nestjs/ipfs-http-client
+yarn add @catalist-nestjs/ipfs-http-client
 ```
 
 ## Ipfs
 
 ### Usage
 
-This module depends on `FetchModule` from `@lido-nestjs/fetch`, so you need to provide it as a global module or import it into `IpfsModule`.
+This module depends on `FetchModule` from `@catalist-nestjs/fetch`, so you need to provide it as a global module or import it into `IpfsModule`.
 
 #### Sync usage
 
 ```ts
 // Import
 import { Module } from '@nestjs/common';
-import { IpfsModule } from '@lido-nestjs/offchain-key-storage-client';
-import { FetchModule } from '@lido-nestjs/fetch';
+import { IpfsModule } from '@catalist-nestjs/offchain-key-storage-client';
+import { FetchModule } from '@catalist-nestjs/fetch';
 import { MyService } from './my.service';
 
 @Module({
@@ -39,7 +39,7 @@ import { MyService } from './my.service';
 export class MyModule {}
 
 // Provider usage
-import { IpfsGeneralService } from '@lido-nestjs/offchain-key-storage-client';
+import { IpfsGeneralService } from '@catalist-nestjs/offchain-key-storage-client';
 
 export class MyService {
   constructor(private ipfsService: IpfsGeneralService) {}
@@ -80,8 +80,8 @@ export class MyModule {}
 
 ```ts
 import { Module } from '@nestjs/common';
-import { IpfsModule } from '@lido-nestjs/offchain-key-storage-client';
-import { FetchModule } from '@lido-nestjs/fetch';
+import { IpfsModule } from '@catalist-nestjs/offchain-key-storage-client';
+import { FetchModule } from '@catalist-nestjs/fetch';
 
 @Module({
   imports: [
@@ -108,4 +108,4 @@ import { FetchModule } from '@lido-nestjs/fetch';
 export class MyModule {}
 ```
 
-Example of usage this library https://github.com/lidofinance/lido-offchain-key-lib-test.git
+Example of usage this library https://github.com/catalistfinance/catalist-offchain-key-lib-test.git

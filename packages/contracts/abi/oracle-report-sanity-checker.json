@@ -1,7 +1,11 @@
 [
   {
     "inputs": [
-      { "internalType": "address", "name": "_lidoLocator", "type": "address" },
+      {
+        "internalType": "address",
+        "name": "_catalistLocator",
+        "type": "address"
+      },
       { "internalType": "address", "name": "_admin", "type": "address" },
       {
         "components": [
@@ -688,7 +692,7 @@
   },
   {
     "inputs": [],
-    "name": "getLidoLocator",
+    "name": "getCatalistLocator",
     "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
     "stateMutability": "view",
     "type": "function"

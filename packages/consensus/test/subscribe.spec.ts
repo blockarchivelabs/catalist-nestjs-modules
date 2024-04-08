@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ModuleMetadata } from '@nestjs/common';
-import { FetchModule, FetchService } from '@lido-nestjs/fetch';
+import { FetchModule, FetchService } from '@catalist-nestjs/fetch';
 import { Test } from '@nestjs/testing';
 import {
   ConsensusMethodArgs,

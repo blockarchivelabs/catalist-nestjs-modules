@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ModuleMetadata } from '@nestjs/common';
-import { createInterface } from '@lido-nestjs/di';
+import { createInterface } from '@catalist-nestjs/di';
 
 export const IpfsModuleOptions =
   createInterface<IpfsModuleOptions>('IpfsModuleOptions');
