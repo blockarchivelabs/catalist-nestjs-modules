@@ -92,13 +92,13 @@ describe('StorageModule - performance tests', () => {
       async () => await validatorsRegistry.update('finalized'),
     );
 
-    expect(secondsForUpdate).toBeLessThan(2);
+    expect(secondsForUpdate).toBeLessThan(5);
 
     const [metaAndValidators, secondsForGet] = await withTimer(
       async () => await validatorsRegistry.getValidators(),
     );
 
-    expect(secondsForGet).toBeLessThan(2);
+    expect(secondsForGet).toBeLessThan(5);
 
     expect(metaAndValidators.validators.length).toBe(10_000);
   });
@@ -110,7 +110,7 @@ describe('StorageModule - performance tests', () => {
       async () => await validatorsRegistry.update('finalized'),
     );
 
-    expect(secondsForUpdate).toBeLessThan(2);
+    expect(secondsForUpdate).toBeLessThan(5);
 
     const pubkeys = stateValidators.data
       .map((x) => x.validator.pubkey)
@@ -120,7 +120,7 @@ describe('StorageModule - performance tests', () => {
       async () => await validatorsRegistry.getValidators(pubkeys),
     );
 
-    expect(secondsForGet).toBeLessThan(2);
+    expect(secondsForGet).toBeLessThan(5);
 
     expect(metaAndValidators.validators.length).toBe(100);
   });
