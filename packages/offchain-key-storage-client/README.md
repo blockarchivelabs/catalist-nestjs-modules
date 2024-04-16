@@ -98,4 +98,4 @@ export class MyService {
 }
 ```
 
-Example of usage this library https://github.com/catalistfinance/catalist-offchain-key-lib-test.git
+Example of usage this library https://github.com/blockarchivelabs/catalist-offchain-key-lib-test.git

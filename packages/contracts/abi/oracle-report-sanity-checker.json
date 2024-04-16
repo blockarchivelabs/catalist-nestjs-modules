@@ -266,7 +266,7 @@
     "name": "MaxAccountingExtraDataItemsCountExceeded",
     "type": "error"
   },
-  { "inputs": [], "name": "NegativeTotalPooledEther", "type": "error" },
+  { "inputs": [], "name": "NegativeTotalPooledAce", "type": "error" },
   { "inputs": [], "name": "TooHighTokenRebaseLimit", "type": "error" },
   { "inputs": [], "name": "TooLowTokenRebaseLimit", "type": "error" },
   {
@@ -643,7 +643,7 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "_postTotalPooledEther",
+        "name": "_postTotalPooledAce",
         "type": "uint256"
       },
       {
@@ -653,7 +653,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "_etherLockedOnWithdrawalQueue",
+        "name": "_aceLockedOnWithdrawalQueue",
         "type": "uint256"
       },
       {
@@ -1013,7 +1013,7 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "_preTotalPooledEther",
+        "name": "_preTotalPooledAce",
         "type": "uint256"
       },
       {
@@ -1044,7 +1044,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "_etherToLockForWithdrawals",
+        "name": "_aceToLockForWithdrawals",
         "type": "uint256"
       },
       {

@@ -121,7 +121,7 @@
   },
   {
     "inputs": [],
-    "name": "NotEnoughEther",
+    "name": "NotEnoughAce",
     "type": "error"
   },
   {
@@ -250,7 +250,7 @@
         "type": "uint256"
       }
     ],
-    "name": "TooMuchEtherToFinalize",
+    "name": "TooMuchAceToFinalize",
     "type": "error"
   },
   {
@@ -313,7 +313,7 @@
   },
   {
     "inputs": [],
-    "name": "ZeroAmountOfETH",
+    "name": "ZeroAmountOfACE",
     "type": "error"
   },
   {
@@ -605,7 +605,7 @@
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "amountOfETH",
+        "name": "amountOfACE",
         "type": "uint256"
       }
     ],
@@ -667,7 +667,7 @@
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "amountOfETHLocked",
+        "name": "amountOfACELocked",
         "type": "uint256"
       },
       {
@@ -926,7 +926,7 @@
         "components": [
           {
             "internalType": "uint256",
-            "name": "remainingEthBudget",
+            "name": "remainingAceBudget",
             "type": "uint256"
           },
           {
@@ -956,7 +956,7 @@
         "components": [
           {
             "internalType": "uint256",
-            "name": "remainingEthBudget",
+            "name": "remainingAceBudget",
             "type": "uint256"
           },
           {
@@ -1129,11 +1129,11 @@
         "type": "uint256[]"
       }
     ],
-    "name": "getClaimableEther",
+    "name": "getClaimableAce",
     "outputs": [
       {
         "internalType": "uint256[]",
-        "name": "claimableEthValues",
+        "name": "claimableAceValues",
         "type": "uint256[]"
       }
     ],
@@ -1194,7 +1194,7 @@
   },
   {
     "inputs": [],
-    "name": "getLockedEtherAmount",
+    "name": "getLockedAceAmount",
     "outputs": [
       {
         "internalType": "uint256",
@@ -1566,7 +1566,7 @@
     "outputs": [
       {
         "internalType": "uint256",
-        "name": "ethToLock",
+        "name": "aceToLock",
         "type": "uint256"
       },
       {

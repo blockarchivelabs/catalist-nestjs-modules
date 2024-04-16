@@ -98,11 +98,11 @@
     "name": "getLastCompletedReportDelta",
     "outputs": [
       {
-        "name": "postTotalPooledEther",
+        "name": "postTotalPooledAce",
         "type": "uint256"
       },
       {
-        "name": "preTotalPooledEther",
+        "name": "preTotalPooledAce",
         "type": "uint256"
       },
       {
@@ -199,7 +199,7 @@
         "type": "uint256"
       },
       {
-        "name": "preTotalEther",
+        "name": "preTotalAce",
         "type": "uint256"
       },
       {
@@ -207,7 +207,7 @@
         "type": "uint256"
       },
       {
-        "name": "postTotalEther",
+        "name": "postTotalAce",
         "type": "uint256"
       },
       {
@@ -449,12 +449,12 @@
     "inputs": [
       {
         "indexed": false,
-        "name": "postTotalPooledEther",
+        "name": "postTotalPooledAce",
         "type": "uint256"
       },
       {
         "indexed": false,
-        "name": "preTotalPooledEther",
+        "name": "preTotalPooledAce",
         "type": "uint256"
       },
       {

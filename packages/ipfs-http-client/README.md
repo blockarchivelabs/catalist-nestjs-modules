@@ -108,4 +108,4 @@ import { FetchModule } from '@catalist-nestjs/fetch';
 export class MyModule {}
 ```
 
-Example of usage this library https://github.com/catalistfinance/catalist-offchain-key-lib-test.git
+Example of usage this library https://github.com/blockarchivelabs/catalist-offchain-key-lib-test.git

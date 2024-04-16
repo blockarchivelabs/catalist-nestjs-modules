@@ -101,7 +101,7 @@ declare module '@ethersproject/providers' {
 
 @Injectable()
 export class ExtendedJsonRpcBatchProvider extends JsonRpcProvider {
-  protected _batchAggregator: NodeJS.Timer | null = null;
+  protected _batchAggregator: NodeJS.Timeout | null = null;
   protected _queue: Queue<FullRequestIntent> = new Queue<FullRequestIntent>();
   protected _requestPolicy: RequestPolicy;
   protected _concurrencyLimiter: LimitFunction;

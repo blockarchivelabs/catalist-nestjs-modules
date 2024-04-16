@@ -100,11 +100,11 @@
     "constant": true,
     "inputs": [
       {
-        "name": "_ethAmount",
+        "name": "_aceAmount",
         "type": "uint256"
       }
     ],
-    "name": "getSharesByPooledEth",
+    "name": "getSharesByPooledAce",
     "outputs": [
       {
         "name": "",
@@ -215,7 +215,7 @@
         "type": "address"
       },
       {
-        "name": "_eip712StETH",
+        "name": "_eip712StACE",
         "type": "address"
       }
     ],
@@ -270,7 +270,7 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "getTotalPooledEther",
+    "name": "getTotalPooledAce",
     "outputs": [
       {
         "name": "",
@@ -363,7 +363,7 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "getBufferedEther",
+    "name": "getBufferedAce",
     "outputs": [
       {
         "name": "",
@@ -382,7 +382,7 @@
         "type": "address"
       },
       {
-        "name": "_eip712StETH",
+        "name": "_eip712StACE",
         "type": "address"
       }
     ],
@@ -561,7 +561,7 @@
         "type": "uint256"
       }
     ],
-    "name": "getPooledEthByShares",
+    "name": "getPooledAceByShares",
     "outputs": [
       {
         "name": "",
@@ -732,7 +732,7 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "getEIP712StETH",
+    "name": "getEIP712StACE",
     "outputs": [
       {
         "name": "",
@@ -1143,7 +1143,7 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "getDepositableEther",
+    "name": "getDepositableAce",
     "outputs": [
       {
         "name": "",
@@ -1300,11 +1300,11 @@
       },
       {
         "indexed": false,
-        "name": "postBufferedEther",
+        "name": "postBufferedAce",
         "type": "uint256"
       }
     ],
-    "name": "ETHDistributed",
+    "name": "ACEDistributed",
     "type": "event"
   },
   {
@@ -1327,7 +1327,7 @@
       },
       {
         "indexed": false,
-        "name": "preTotalEther",
+        "name": "preTotalAce",
         "type": "uint256"
       },
       {
@@ -1337,7 +1337,7 @@
       },
       {
         "indexed": false,
-        "name": "postTotalEther",
+        "name": "postTotalAce",
         "type": "uint256"
       },
       {
@@ -1473,11 +1473,11 @@
     "inputs": [
       {
         "indexed": false,
-        "name": "eip712StETH",
+        "name": "eip712StACE",
         "type": "address"
       }
     ],
-    "name": "EIP712StETHInitialized",
+    "name": "EIP712StACEInitialized",
     "type": "event"
   },
   {
