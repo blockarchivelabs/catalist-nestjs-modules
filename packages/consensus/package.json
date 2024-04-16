@@ -7,7 +7,7 @@
   "homepage": "https://github.com/blockarchivelabs/catalist-nestjs-modules",
   "repository": {
     "type": "git",
-    "url": "https://github.com/blockarchivelabs/catalist-nestjs-modules.git",
+    "url": "git+https://github.com/blockarchivelabs/catalist-nestjs-modules.git",
     "directory": "packages/consensus"
   },
   "bugs": {
@@ -49,5 +49,13 @@
     "openapi-typescript": "^4.5.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.5.2"
-  }
+  },
+  "description": "NestJS Consensus Layer API Module for Catalist Finance projects. Part of [Catalist NestJS Modules](https://github.com/blockarchivelabs/catalist-nestjs-modules/#readme)",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": ""
 }
