@@ -1,7 +1,6 @@
 {
   "name": "catalist-nestjs-modules",
-  "version": "0.0.2",
-  "private": true,
+  "version": "0.0.3",
   "workspaces": [
     "packages/*"
   ],
