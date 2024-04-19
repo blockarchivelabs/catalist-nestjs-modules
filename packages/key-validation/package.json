@@ -1,6 +1,6 @@
 {
   "name": "@catalist-nestjs/key-validation",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
@@ -32,7 +32,7 @@
     "@catalist-nestjs/contracts": "workspace:*",
     "@catalist-nestjs/di": "workspace:*",
     "@catalist-nestjs/utils": "workspace:*",
-    "@chainsafe/blst": "0.2.4",
+    "@chainsafe/blst": "0.2.10",
     "@chainsafe/ssz": "0.9.2",
     "piscina": "3.2.0"
   },

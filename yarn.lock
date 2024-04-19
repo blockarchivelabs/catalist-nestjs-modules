@@ -583,6 +583,7 @@ __metadata:
     "@nestjs/core": ^8.2.5
     reflect-metadata: ^0.1.13
     rxjs: ^7.5.2
+    tslib: ^2.3.1
   languageName: unknown
   linkType: soft
 
@@ -594,7 +595,7 @@ __metadata:
     "@catalist-nestjs/contracts": "workspace:*"
     "@catalist-nestjs/di": "workspace:*"
     "@catalist-nestjs/utils": "workspace:*"
-    "@chainsafe/blst": 0.2.4
+    "@chainsafe/blst": 0.2.10
     "@chainsafe/ssz": 0.9.2
     "@ethersproject/providers": ^5.5.3
     "@nestjs/common": ^8.2.5
@@ -668,6 +669,7 @@ __metadata:
     "@nestjs/core": ^8.2.5
     reflect-metadata: ^0.1.13
     rxjs: ^7.5.2
+    tslib: ^2.3.1
   languageName: unknown
   linkType: soft
 
@@ -759,13 +761,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chainsafe/blst@npm:0.2.4":
-  version: 0.2.4
-  resolution: "@chainsafe/blst@npm:0.2.4"
+"@chainsafe/blst@npm:0.2.10":
+  version: 0.2.10
+  resolution: "@chainsafe/blst@npm:0.2.10"
   dependencies:
+    "@types/tar": ^6.1.4
     node-fetch: ^2.6.1
     node-gyp: ^8.4.0
-  checksum: eae72b91e7472bf1e300f02b5be6dbb70eb523fb3a2777268ed8b681966252e509c9eb82b7f4b91b6435929e0f424ac2f39c690be9fee6b0237ea47834bd5bb7
+  checksum: 40371b1e25627af707332468da6dcbfc01142e756ee3d264ca35c17f8f611ed20535e3f1b1c00eb4871c199ba00bfea0893c29c22f57ab502616f39d5ef7c35c
   languageName: node
   linkType: hard
 
@@ -4334,6 +4337,16 @@ __metadata:
     "@types/node": "*"
     "@types/stream-chain": "*"
   checksum: deb351b9d42d0280a57103f2064440247a5e332d337f75f90bbde33fdca1fb83b20e717fbc6bb1825a727b7ecffb7393a34cc63ad300a7834960ea077bdf8ac8
+  languageName: node
+  linkType: hard
+
+"@types/tar@npm:^6.1.4":
+  version: 6.1.13
+  resolution: "@types/tar@npm:6.1.13"
+  dependencies:
+    "@types/node": "*"
+    minipass: ^4.0.0
+  checksum: bb3910936a6b37f093e38b73a52b0544fd73079685f5ea72e5c049fddc3770e58d80cf6d714425853f0746290221852c1a7ca89ffdb9614f3b2a858a3bf5436a
   languageName: node
   linkType: hard
 
