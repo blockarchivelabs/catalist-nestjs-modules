@@ -18,7 +18,7 @@ import {
   StakingRouterContractModule,
   ValidatorsExitBusOracleHashConsensusModule,
   WithdrawalQueueContractModule,
-  WstaceContractModule,
+  WbaceContractModule,
   OracleReportSanityCheckerModule,
   ACCOUNTING_ORACLE_HASH_CONSENSUS_TOKEN,
   ACCOUNTING_ORACLE_HASH_CONSENSUS_ADDRESSES,
@@ -52,8 +52,8 @@ import {
   VALIDATORS_EXIT_BUS_ORACLE_HASH_CONSENSUS_TOKEN,
   WITHDRAWAL_QUEUE_CONTRACT_ADDRESSES,
   WITHDRAWAL_QUEUE_CONTRACT_TOKEN,
-  WSTACE_CONTRACT_ADDRESSES,
-  WSTACE_CONTRACT_TOKEN,
+  WBACE_CONTRACT_ADDRESSES,
+  WBACE_CONTRACT_TOKEN,
   ORACLE_REPORT_SANITY_CHECKER_ADDRESSES,
   ORACLE_REPORT_SANITY_CHECKER_TOKEN,
 } from '../src';
@@ -213,11 +213,11 @@ describe('Chains', () => {
     );
   });
 
-  test('wstace', async () => {
+  test('wbace', async () => {
     await testAddress(
-      WstaceContractModule,
-      WSTACE_CONTRACT_TOKEN,
-      WSTACE_CONTRACT_ADDRESSES,
+      WbaceContractModule,
+      WBACE_CONTRACT_TOKEN,
+      WBACE_CONTRACT_ADDRESSES,
     );
   });
 

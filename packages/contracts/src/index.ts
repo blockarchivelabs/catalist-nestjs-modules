@@ -45,8 +45,8 @@ export * from './staking-router/staking-router.module';
 export * from './withdrawal-queue/withdrawal-queue.constants';
 export * from './withdrawal-queue/withdrawal-queue.module';
 
-export * from './wstace/wstace.constants';
-export * from './wstace/wstace.module';
+export * from './wbace/wbace.constants';
+export * from './wbace/wbace.module';
 
 export * from './oracle-report-sanity-checker/oracle-report-sanity-checker.constants';
 export * from './oracle-report-sanity-checker/oracle-report-sanity-checker.module';

@@ -47,6 +47,7 @@
     "name": "InitialEpochRefSlotCannotBeEarlierThanProcessingSlot",
     "type": "error"
   },
+  { "inputs": [], "name": "InvalidChainConfig", "type": "error" },
   { "inputs": [], "name": "InvalidSlot", "type": "error" },
   { "inputs": [], "name": "NewProcessorCannotBeTheSame", "type": "error" },
   {
@@ -73,6 +74,19 @@
     ],
     "name": "UnexpectedConsensusVersion",
     "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "refSlot",
+        "type": "uint256"
+      }
+    ],
+    "name": "ConsensusLost",
+    "type": "event"
   },
   {
     "anonymous": false,

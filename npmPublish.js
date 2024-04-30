@@ -5,12 +5,12 @@ const { execSync } = require('child_process');
 const packagesDir = './packages';
 const packageFolders = fs.readdirSync(packagesDir);
 
-const excludePackage = [];
+const includePackage = ['constants'];
 
 packageFolders.forEach((packageFolder) => {
   const packagePath = path.join(packagesDir, packageFolder);
 
-  if (excludePackage.includes(packagePath.split('/')[1])) return;
+  if (!includePackage.includes(packagePath.split('/')[1])) return;
 
   const packageJsonPath = path.join(packagePath, 'package.json');
 
@@ -24,17 +24,25 @@ packageFolders.forEach((packageFolder) => {
       .toString()
       .trim();
 
-    if (currentPublishedVersion !== currentVersion) {
+    const currentPublishedVersionParts = currentPublishedVersion.split('.');
+    const versionParts = currentVersion.split('.');
+    let newVersion = '';
+    currentVersion = currentPublishedVersion;
+
+    if (
+      +currentPublishedVersionParts[0] < +versionParts[0] ||
+      +currentPublishedVersionParts[1] < +versionParts[1] ||
+      +currentPublishedVersionParts[2] < +versionParts[1]
+    ) {
+      newVersion = `${versionParts[0]}.${versionParts[1]}.${+versionParts[2]}`;
+    } else {
       console.log(
         `${packageName} is already at version ${currentPublishedVersion}.`,
       );
-      currentVersion = currentPublishedVersion;
+      newVersion = `${currentPublishedVersionParts[0]}.${
+        currentPublishedVersionParts[1]
+      }.${parseInt(currentPublishedVersionParts[2]) + 1}`;
     }
-
-    const versionParts = currentVersion.split('.');
-    const newVersion = `${versionParts[0]}.${versionParts[1]}.${
-      parseInt(versionParts[2]) + 1
-    }`;
 
     packageJson.version = newVersion;
 
